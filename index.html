@@ -1,136 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blossom Boutique - Flower Shop</title>
-    <style>
-        :root {
-            --primary: #f472b6;
-            --primary-dark: #db2777;
-            --background: #fdf2f8;
-            --text-dark: #1f2937;
-            --text-light: #4b5563;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: white;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: var(--primary-dark);
-            font-size: 2.5rem;
-            margin: 0;
-            letter-spacing: -0.5px;
-        }
-
-        .subtitle {
-            color: var(--text-light);
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        .section-title {
-            color: var(--primary);
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .contact-info, .hours-info {
-            background-color: #fff1f2;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--primary);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .contact-info:hover, .hours-info:hover {
-            transform: translateY(-2px);
-        }
-
-        .info-grid h3 {
-            margin-top: 0;
-            color: var(--primary-dark);
-        }
-
-        .info-grid p {
-            margin: 0.5rem 0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-light);
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 600px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Blossom Boutique | Premium Floral Services</title>
+    
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Blossom Boutique</h1>
-        <p class="subtitle">Fresh Flowers for Every Occasion</p>
+
+    <!-- Header Navigation -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-custom px-3 px-lg-4">
+            <div class="container-fluid align-items-center">
+                
+                <!-- Hamburger Menu (Mobile/Tablet) -->
+                <button class="navbar-toggler border-0 shadow-none ms-0 pe-2 mobile-only" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="bi bi-list fs-1 text-primary"></span>
+                </button>
+
+                <!-- Logo -->
+                <a class="navbar-brand mx-auto mx-lg-0" href="index.html">
+                    <img src="assets/images/logo.svg" alt="Blossom Logo">
+                </a>
+
+                <!-- Theme Toggle (Mobile Top Right) -->
+                <button class="btn btn-link text-primary shadow-none mobile-only px-2" id="themeToggleMobile" aria-label="Toggle Theme">
+                    <i class="bi bi-moon-stars-fill fs-4"></i>
+                </button>
+
+                <!-- Offcanvas for Mobile -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header border-bottom">
+                        <img src="assets/images/logo.svg" alt="Blossom Logo" style="height: 35px;">
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    
+                    <div class="offcanvas-body d-flex flex-column align-items-lg-center">
+                        <ul class="navbar-nav mx-lg-auto mb-4 mb-lg-0 align-items-lg-center gap-lg-3 fs-5 fs-lg-6">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="checkout.html">Shop</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Actions -->
+                        <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-auto mt-lg-0 ps-lg-3 border-lg-start">
+                            <button class="btn btn-link text-primary desktop-only" id="themeToggleDesktop" aria-label="Toggle Theme">
+                                <i class="bi bi-moon-stars-fill fs-5"></i>
+                            </button>
+                            <a href="login.html" class="btn btn-outline-primary w-100 w-lg-auto">Login</a>
+                            <a href="register.html" class="btn btn-primary w-100 w-lg-auto">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <section>
-            <h2 class="section-title">About Us</h2>
-            <p>Welcome to Blossom Boutique, your local neighborhood florist. We specialize in creating beautiful, hand-crafted floral arrangements for weddings, birthdays, anniversaries, and everyday moments. Our flowers are sourced daily to ensure the highest quality and longest-lasting blooms.</p>
+        <!-- Hero Section -->
+        <section class="py-5 py-lg-7" style="background: linear-gradient(135deg, rgba(255,179,198,0.2) 0%, rgba(255,250,248,1) 100%);">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <h1 class="display-3 fw-bold mb-4">Send Love with Flowers Today</h1>
+                        <p class="lead text-muted mb-5">Beautiful, hand-crafted floral arrangements for every special moment. Bringing joy to your loved ones with our fresh blooms.</p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                            <a href="checkout.html" class="btn btn-primary btn-lg px-4">Order Now</a>
+                            <a href="#occasions" class="btn btn-outline-primary btn-lg px-4">Explore Occasions</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center position-relative">
+                        <img src="https://images.unsplash.com/photo-1563241598-a28a304e2808?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beautiful flower arrangement" class="img-fluid rounded-4 shadow-lg w-100" style="max-width: 500px;">
+                        
+                        <div class="position-absolute bottom-0 start-0 translate-middle-y ms-1 ms-md-4 bg-white p-3 rounded-3 shadow d-flex align-items-center gap-3">
+                            <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+                                <i class="bi bi-truck fs-4"></i>
+                            </div>
+                            <div class="text-start">
+                                <div class="fw-bold fw-600 text-dark">Same-Day Delivery</div>
+                                <div class="small text-muted">Order before 4 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="info-grid">
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p>📍 123 Floral Lane, Springville</p>
-                <p>📞 (555) 123-4567</p>
-                <p>✉️ hello@blossomboutique.com</p>
-            </div>
-            
-            <div class="hours-info">
-                <h3>Opening Hours</h3>
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM</p>
-                <p>Sunday: Closed</p>
+        <!-- Shop By Occasion Section -->
+        <section id="occasions" class="section-padding bg-white">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Shop by Occasion</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 600px;">Find the perfect arrangement to express your feelings and celebrate life's moments.</p>
+                </div>
+                
+                <div class="row g-4 justify-content-center">
+                    <!-- Occasion 1 -->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="checkout.html" class="card h-100 text-decoration-none border-0 shadow-sm text-center">
+                            <div class="ratio ratio-1x1 bg-light">
+                                <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover h-100" alt="Birthday">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title mb-2">Birthday</h3>
+                                <div class="text-primary fw-medium small">Shop Collection <i class="bi bi-arrow-right ms-1"></i></div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Occasion 2 -->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="checkout.html" class="card h-100 text-decoration-none border-0 shadow-sm text-center">
+                            <div class="ratio ratio-1x1 bg-light">
+                                <img src="https://images.unsplash.com/photo-1510265696660-f1406dc042b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover h-100" alt="Anniversary">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title mb-2">Anniversary</h3>
+                                <div class="text-primary fw-medium small">Shop Collection <i class="bi bi-arrow-right ms-1"></i></div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Occasion 3 -->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="checkout.html" class="card h-100 text-decoration-none border-0 shadow-sm text-center">
+                            <div class="ratio ratio-1x1 bg-light">
+                                <img src="https://images.unsplash.com/photo-1548625361-ec8531cecd79?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover h-100" alt="Romance">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title mb-2">Love & Romance</h3>
+                                <div class="text-primary fw-medium small">Shop Collection <i class="bi bi-arrow-right ms-1"></i></div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Occasion 4 -->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="checkout.html" class="card h-100 text-decoration-none border-0 shadow-sm text-center">
+                            <div class="ratio ratio-1x1 bg-light">
+                                <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover h-100" alt="Sympathy">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title mb-2">Sympathy</h3>
+                                <div class="text-primary fw-medium small">Shop Collection <i class="bi bi-arrow-right ms-1"></i></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- CTA Banner -->
+        <section class="py-5" style="background-color: var(--bs-secondary);">
+            <div class="container text-center py-4">
+                <i class="bi bi-gift-fill display-4 text-primary mb-3"></i>
+                <h2 class="display-6 fw-bold mb-3 text-dark">Need it today? We've got you covered.</h2>
+                <p class="lead mb-4 mx-auto text-dark opacity-75" style="max-width: 600px;">Order before 4 PM for guaranteed same-day delivery anywhere in the city.</p>
+                <a href="checkout.html" class="btn btn-primary btn-lg px-5 rounded-pill shadow">Send Flowers Today</a>
+            </div>
+        </section>
+
+        <!-- Bestsellers Section -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-end mb-5 gap-3">
+                    <div>
+                        <h2 class="display-6 fw-bold mb-2">Our Bestsellers</h2>
+                        <p class="text-muted mb-0">Customer favorites for every occasion.</p>
+                    </div>
+                    <a href="checkout.html" class="btn btn-outline-primary rounded-pill">View All Collection</a>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- Product 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <a href="checkout.html" class="ratio ratio-4x3 overflow-hidden bg-light d-block position-relative">
+                                <img src="https://images.unsplash.com/photo-1542475141-94572227d81a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover w-100 h-100 transition-transform" alt="Classic Red Roses">
+                            </a>
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="h5 mb-0"><a href="checkout.html" class="text-dark text-decoration-none stretched-link">Classic Red Roses</a></h3>
+                                    <span class="fs-5 fw-bold text-primary">$65.00</span>
+                                </div>
+                                <p class="text-muted small mb-4">Elegance in a vase</p>
+                                <a href="checkout.html" class="btn btn-primary w-100 position-relative z-1">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <a href="checkout.html" class="ratio ratio-4x3 overflow-hidden bg-light d-block position-relative">
+                                <span class="badge bg-primary position-absolute top-0 start-0 m-3 z-1 px-3 py-2 rounded-pill">Popular</span>
+                                <img src="https://images.unsplash.com/photo-1523694576722-cbaec25026df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover w-100 h-100 transition-transform" alt="Pastel Dreams">
+                            </a>
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="h5 mb-0"><a href="checkout.html" class="text-dark text-decoration-none stretched-link">Pastel Dreams</a></h3>
+                                    <span class="fs-5 fw-bold text-primary">$85.00</span>
+                                </div>
+                                <p class="text-muted small mb-4">Soft mix of pinks and whites</p>
+                                <a href="checkout.html" class="btn btn-primary w-100 position-relative z-1">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm product-card">
+                            <a href="checkout.html" class="ratio ratio-4x3 overflow-hidden bg-light d-block position-relative">
+                                <img src="https://images.unsplash.com/photo-1457089328109-e5d9bd49f563?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover w-100 h-100 transition-transform" alt="Sunshine Yellow">
+                            </a>
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="h5 mb-0"><a href="checkout.html" class="text-dark text-decoration-none stretched-link">Sunshine Yellow</a></h3>
+                                    <span class="fs-5 fw-bold text-primary">$55.00</span>
+                                </div>
+                                <p class="text-muted small mb-4">Bright sunflowers and daisies</p>
+                                <a href="checkout.html" class="btn btn-primary w-100 position-relative z-1">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Blossom Boutique. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer bg-white border-top py-5">
+        <div class="container pb-4">
+            <div class="row gy-4">
+                <!-- Branding -->
+                <div class="col-lg-4 pe-lg-5">
+                    <a href="index.html" class="d-inline-flex align-items-center mb-3 text-decoration-none">
+                        <img src="assets/images/logo.svg" alt="Blossom Logo" style="height: 40px;">
+                    </a>
+                    <p class="text-muted mb-4 small">Delivering joy and beautiful moments through lovingly arranged fresh flowers. Premium quality guaranteed.</p>
+                    <div class="d-flex gap-3 fs-5 text-muted">
+                        <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h4 class="h6 fw-bold mb-3 text-dark">Company</h4>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                        <li><a href="about.html" class="text-muted text-decoration-none text-primary-hover">About Us</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none text-primary-hover">Contact</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Careers</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h4 class="h6 fw-bold mb-3 text-dark">Support</h4>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">FAQs</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Shipping</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Returns</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="col-md-4 col-lg-4">
+                    <h4 class="h6 fw-bold mb-3 text-dark">Join Our Newsletter</h4>
+                    <p class="text-muted small mb-3">Get 10% off your first order and stay updated on our latest collections.</p>
+                    <form class="d-flex w-100">
+                        <input type="email" class="form-control rounded-start-pill border-end-0 shadow-none px-4" placeholder="Email address" required>
+                        <button type="submit" class="btn btn-primary rounded-end-pill px-4">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container pt-4 border-top mt-2">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="text-muted small mb-0">&copy; 2026 Blossom Boutique. All rights reserved.</p>
+                <button class="btn btn-light rounded-circle shadow-sm" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to top">
+                    <i class="bi bi-arrow-up"></i>
+                </button>
+            </div>
+        </div>
     </footer>
+
+    <a href="https://wa.me/15551234567" class="position-fixed bottom-0 end-0 m-4 bg-success text-white rounded-circle d-flex align-items-center justify-content-center shadow-lg transition-transform hover-scale" style="width: 60px; height: 60px; z-index: 100;" target="_blank" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp fs-3"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Theme Toggle Logic -->
+    <script>
+        const themeToggles = document.querySelectorAll('#themeToggleDesktop, #themeToggleMobile');
+        
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-bs-theme', theme);
+            localStorage.setItem('theme', theme);
+            const iconClass = theme === 'dark' ? 'bi-sun-fill' : 'bi-moon-stars-fill';
+            themeToggles.forEach(toggle => {
+                toggle.innerHTML = `<i class="bi ${iconClass} fs-5"></i>`;
+            });
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+
+        themeToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+                setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+            });
+        });
+    </script>
 </body>
 </html>

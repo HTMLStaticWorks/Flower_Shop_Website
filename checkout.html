@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Blossom Boutique</title>
+    
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Header Navigation (Exact Match to Index) -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-custom px-3 px-lg-4">
+            <div class="container-fluid align-items-center">
+                
+                <button class="navbar-toggler border-0 shadow-none ms-0 pe-2 mobile-only" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="bi bi-list fs-1 text-primary"></span>
+                </button>
+
+                <a class="navbar-brand mx-auto mx-lg-0" href="index.html">
+                    <img src="assets/images/logo.svg" alt="Blossom Logo">
+                </a>
+
+                <button class="btn btn-link text-primary shadow-none mobile-only px-2" id="themeToggleMobile" aria-label="Toggle Theme">
+                    <i class="bi bi-moon-stars-fill fs-4"></i>
+                </button>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header border-bottom">
+                        <img src="assets/images/logo.svg" alt="Blossom Logo" style="height: 35px;">
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    
+                    <div class="offcanvas-body d-flex flex-column align-items-lg-center">
+                        <ul class="navbar-nav mx-lg-auto mb-4 mb-lg-0 align-items-lg-center gap-lg-3 fs-5 fs-lg-6">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="checkout.html">Shop</a>
+                            </li>
+                        </ul>
+                        
+                        <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-auto mt-lg-0 ps-lg-3 border-lg-start">
+                            <button class="btn btn-link text-primary desktop-only" id="themeToggleDesktop" aria-label="Toggle Theme">
+                                <i class="bi bi-moon-stars-fill fs-5"></i>
+                            </button>
+                            <a href="login.html" class="btn btn-outline-primary w-100 w-lg-auto">Login</a>
+                            <a href="register.html" class="btn btn-primary w-100 w-lg-auto">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bold mb-2">Complete Your Order</h1>
+                <p class="text-muted"><i class="bi bi-lock-fill text-success"></i> Safe and secure checkout</p>
+            </div>
+
+            <form action="#" method="POST" id="checkout-form" class="row gy-5">
+                <!-- Left Column: Checkout Fields -->
+                <div class="col-lg-7 col-xl-8">
+                    
+                    <!-- Sender Details -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="h4 fw-bold mb-4 border-bottom pb-3"><i class="bi bi-person text-primary me-2"></i> 1. Your Details (Sender)</h2>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="sender-name" class="form-label fw-medium">Full Name *</label>
+                                    <input type="text" id="sender-name" class="form-control form-control-lg bg-light border-0" required placeholder="John Doe">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sender-phone" class="form-label fw-medium">Phone Number *</label>
+                                    <input type="tel" id="sender-phone" class="form-control form-control-lg bg-light border-0" required placeholder="+1 (555) 000-0000">
+                                </div>
+                                <div class="col-12">
+                                    <label for="sender-email" class="form-label fw-medium">Email Address * <span class="text-muted fw-normal fs-6">(For order updates)</span></label>
+                                    <input type="email" id="sender-email" class="form-control form-control-lg bg-light border-0" required placeholder="john@example.com">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recipient Details -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="h4 fw-bold mb-4 border-bottom pb-3"><i class="bi bi-gift text-primary me-2"></i> 2. Delivery Details (Recipient)</h2>
+                            
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="same-as-sender">
+                                <label class="form-check-label user-select-none" for="same-as-sender">
+                                    Deliver to myself (Same as sender)
+                                </label>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="recipient-name" class="form-label fw-medium">Recipient Name *</label>
+                                    <input type="text" id="recipient-name" class="form-control form-control-lg bg-light border-0" required placeholder="Jane Smith">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="recipient-phone" class="form-label fw-medium">Recipient Phone *</label>
+                                    <input type="tel" id="recipient-phone" class="form-control form-control-lg bg-light border-0" required placeholder="+1 (555) 111-1111">
+                                </div>
+                                <div class="col-12">
+                                    <label for="delivery-address" class="form-label fw-medium">Delivery Address *</label>
+                                    <textarea id="delivery-address" class="form-control form-control-lg bg-light border-0" rows="3" required placeholder="Street address, apartment, suite, unit etc."></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="delivery-city" class="form-label fw-medium">City/Area *</label>
+                                    <input type="text" id="delivery-city" class="form-control form-control-lg bg-light border-0" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="delivery-zip" class="form-label fw-medium">Zip/Pin Code *</label>
+                                    <input type="text" id="delivery-zip" class="form-control form-control-lg bg-light border-0" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="delivery-instructions" class="form-label fw-medium">Special Instructions (Optional)</label>
+                                    <input type="text" id="delivery-instructions" class="form-control form-control-lg bg-light border-0" placeholder="e.g. Leave at front door, ring doorbell">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="h4 fw-bold mb-4 border-bottom pb-3"><i class="bi bi-credit-card text-primary me-2"></i> 3. Payment Method</h2>
+                            
+                            <div class="accordion" id="paymentAccordion">
+                                <!-- UPI -->
+                                <div class="accordion-item border rounded-3 mb-3 border-primary shadow-sm">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button bg-primary bg-opacity-10 text-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUpi" aria-expanded="true">
+                                            <div class="w-100 d-flex justify-content-between align-items-center me-3">
+                                                <span><i class="bi bi-qr-code me-2"></i> UPI (Google Pay, PhonePe, Paytm)</span>
+                                                <input class="form-check-input mt-0" type="radio" name="paymentMethod" value="upi" checked>
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseUpi" class="accordion-collapse collapse show" data-bs-parent="#paymentAccordion">
+                                        <div class="accordion-body text-muted bg-white rounded-bottom-3 p-4">
+                                            You will be redirected to the secure UPI gateway to complete your payment with any supported UPI app.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card -->
+                                <div class="accordion-item border rounded-3 mb-3">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed text-dark fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCard" aria-expanded="false">
+                                            <div class="w-100 d-flex justify-content-between align-items-center me-3">
+                                                <span><i class="bi bi-credit-card-2-front me-2"></i> Credit / Debit Card</span>
+                                                <input class="form-check-input mt-0" type="radio" name="paymentMethod" value="card">
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseCard" class="accordion-collapse collapse" data-bs-parent="#paymentAccordion">
+                                        <div class="accordion-body bg-white rounded-bottom-3 p-4">
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control form-control-lg bg-light border-0" placeholder="Card Number">
+                                            </div>
+                                            <div class="row g-2">
+                                                <div class="col-6">
+                                                    <input type="text" class="form-control form-control-lg bg-light border-0" placeholder="MM/YY">
+                                                </div>
+                                                <div class="col-6">
+                                                    <input type="text" class="form-control form-control-lg bg-light border-0" placeholder="CVC">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- COD -->
+                                <div class="accordion-item border rounded-3 mb-3">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed text-dark fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCod" aria-expanded="false">
+                                            <div class="w-100 d-flex justify-content-between align-items-center me-3">
+                                                <span><i class="bi bi-cash-stack text-success me-2"></i> Cash on Delivery (COD)</span>
+                                                <input class="form-check-input mt-0" type="radio" name="paymentMethod" value="cod">
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseCod" class="accordion-collapse collapse" data-bs-parent="#paymentAccordion">
+                                        <div class="accordion-body text-muted bg-white rounded-bottom-3 p-4">
+                                            Pay with cash when your flowers are delivered.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Order Summary -->
+                <div class="col-lg-5 col-xl-4">
+                    <div class="card border-0 shadow-sm position-sticky" style="top: calc(var(--nav-height) + 2rem);">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="h4 fw-bold mb-4">Order Summary</h2>
+                            
+                            <!-- Item -->
+                            <div class="d-flex gap-3 pb-3 mb-3 border-bottom">
+                                <img src="https://images.unsplash.com/photo-1523694576722-cbaec25026df?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" class="rounded-3 object-fit-cover" style="width: 70px; height: 70px;" alt="Pastel Dreams">
+                                <div class="flex-grow-1">
+                                    <h3 class="h6 mb-1 fw-bold">Pastel Dreams</h3>
+                                    <div class="small text-muted mb-1">Size: Standard</div>
+                                    <div class="small text-muted">Delivery: Today</div>
+                                </div>
+                                <div class="fw-bold">$85.00</div>
+                            </div>
+                            
+                            <!-- Add-on -->
+                            <div class="d-flex gap-3 pb-3 mb-4 border-bottom">
+                                <div class="bg-light text-primary rounded-3 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                                    <i class="bi bi-cake-fill fs-3"></i>
+                                </div>
+                                <div class="flex-grow-1 d-flex flex-column justify-content-center">
+                                    <h3 class="h6 mb-0 fw-bold">Chocolate Truffle</h3>
+                                    <div class="small text-muted">Add-on Item</div>
+                                </div>
+                                <div class="fw-bold d-flex align-items-center">$25.00</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-muted">Subtotal</span>
+                                <span>$110.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="text-muted">Delivery Fee</span>
+                                <span class="text-success fw-medium">Free</span>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between border-top pt-3 mt-3 mb-4">
+                                <span class="h5 fw-bold mb-0">Total</span>
+                                <span class="h5 fw-bold text-primary mb-0">$110.00</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100 py-3 mb-3 fs-5">
+                                <i class="bi bi-lock-fill me-2"></i> Place Order
+                            </button>
+                            
+                            <div class="text-center opacity-50">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Razorpay_logo.svg/512px-Razorpay_logo.svg.png" alt="Secured by Razorpay" style="height: 18px; filter: grayscale(100%);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer (Exact Match) -->
+    <footer class="footer bg-white border-top py-5">
+        <div class="container pb-4">
+            <div class="row gy-4">
+                <div class="col-lg-4 pe-lg-5">
+                    <a href="index.html" class="d-inline-flex align-items-center mb-3 text-decoration-none">
+                        <img src="assets/images/logo.svg" alt="Blossom Logo" style="height: 40px;">
+                    </a>
+                    <p class="text-muted mb-4 small">Delivering joy and beautiful moments through lovingly arranged fresh flowers. Premium quality guaranteed.</p>
+                    <div class="d-flex gap-3 fs-5 text-muted">
+                        <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h4 class="h6 fw-bold mb-3 text-dark">Company</h4>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                        <li><a href="about.html" class="text-muted text-decoration-none text-primary-hover">About Us</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none text-primary-hover">Contact</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Careers</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h4 class="h6 fw-bold mb-3 text-dark">Support</h4>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">FAQs</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Shipping</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Returns</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h4 class="h6 fw-bold mb-3 text-dark">Join Our Newsletter</h4>
+                    <p class="text-muted small mb-3">Get 10% off your first order and stay updated on our latest collections.</p>
+                    <form class="d-flex w-100">
+                        <input type="email" class="form-control rounded-start-pill border-end-0 shadow-none px-4" placeholder="Email address" required>
+                        <button type="submit" class="btn btn-primary rounded-end-pill px-4">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-4 border-top mt-2">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="text-muted small mb-0">&copy; 2026 Blossom Boutique. All rights reserved.</p>
+                <button class="btn btn-light rounded-circle shadow-sm" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to top">
+                    <i class="bi bi-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS & Theme -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form interactivity
+        document.querySelectorAll('.accordion-button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const radio = this.querySelector('input[type="radio"]');
+                if(radio) radio.checked = true;
+                
+                // Reset styles
+                document.querySelectorAll('.accordion-button').forEach(b => {
+                    b.classList.remove('bg-primary', 'bg-opacity-10', 'text-primary');
+                    b.classList.add('text-dark');
+                });
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    i.classList.remove('border-primary', 'shadow-sm');
+                });
+                
+                // Add styles to active
+                this.classList.add('bg-primary', 'bg-opacity-10', 'text-primary');
+                this.classList.remove('text-dark');
+                this.closest('.accordion-item').classList.add('border-primary', 'shadow-sm');
+            });
+        });
+
+        const sameAsSender = document.getElementById('same-as-sender');
+        if(sameAsSender) {
+            sameAsSender.addEventListener('change', function() {
+                if(this.checked) {
+                    document.getElementById('recipient-name').value = document.getElementById('sender-name').value;
+                    document.getElementById('recipient-phone').value = document.getElementById('sender-phone').value;
+                } else {
+                    document.getElementById('recipient-name').value = '';
+                    document.getElementById('recipient-phone').value = '';
+                }
+            });
+        }
+        
+        document.getElementById('checkout-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.body.innerHTML = `
+                <div class="min-vh-100 d-flex flex-column align-items-center justify-content-center bg-light text-center p-4">
+                    <i class="bi bi-check-circle-fill text-success" style="font-size: 5rem; margin-bottom: 1rem;"></i>
+                    <h1 class="display-4 fw-bold mb-3">Order Placed!</h1>
+                    <p class="lead text-muted mb-4">Your order #10045 has been confirmed. You will receive a WhatsApp message shortly.</p>
+                    <a href="index.html" class="btn btn-primary btn-lg rounded-pill px-5">Return to Home</a>
+                </div>
+            `;
+        });
+
+        // Theme Toggle
+        const themeToggles = document.querySelectorAll('#themeToggleDesktop, #themeToggleMobile');
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-bs-theme', theme);
+            localStorage.setItem('theme', theme);
+            const iconClass = theme === 'dark' ? 'bi-sun-fill' : 'bi-moon-stars-fill';
+            themeToggles.forEach(toggle => { toggle.innerHTML = `<i class="bi ${iconClass} fs-5"></i>`; });
+        }
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+        themeToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+                setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+            });
+        });
+    </script>
+</body>
+</html>

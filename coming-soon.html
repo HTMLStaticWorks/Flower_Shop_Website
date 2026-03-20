@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Blossom Boutique</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .coming-soon {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to right bottom, #FFE5EE, #FFF);
+            padding: 2rem;
+        }
+        
+        .box {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 4rem 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .input-group {
+            display: flex;
+            margin-top: 2rem;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .input-group input {
+            padding: 1rem;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-pill);
+            outline: none;
+            width: 70%;
+            font-family: var(--font-body);
+        }
+    </style>
+</head>
+<body>
+
+    <main class="coming-soon">
+        <div class="box">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-main);">Something Beautiful is Blooming</h1>
+            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">We are working hard to put the finishing touches on our new online store. Check back soon!</p>
+            
+            <form onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+                <div class="input-group">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1.5rem;">Notify Me</button>
+                </div>
+            </form>
+            
+            <div style="margin-top: 3rem;">
+                <a href="index.html" style="color: var(--primary); font-weight: 500;">Take me to the current Home Page</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
