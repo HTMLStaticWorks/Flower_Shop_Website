@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom Boutique - Flower Shop</title>
+    <style>
+        :root {
+            --primary: #f472b6;
+            --primary-dark: #db2777;
+            --background: #fdf2f8;
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--primary-dark);
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info, .hours-info {
+            background-color: #fff1f2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .contact-info:hover, .hours-info:hover {
+            transform: translateY(-2px);
+        }
+
+        .info-grid h3 {
+            margin-top: 0;
+            color: var(--primary-dark);
+        }
+
+        .info-grid p {
+            margin: 0.5rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blossom Boutique</h1>
+        <p class="subtitle">Fresh Flowers for Every Occasion</p>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="section-title">About Us</h2>
+            <p>Welcome to Blossom Boutique, your local neighborhood florist. We specialize in creating beautiful, hand-crafted floral arrangements for weddings, birthdays, anniversaries, and everyday moments. Our flowers are sourced daily to ensure the highest quality and longest-lasting blooms.</p>
+        </section>
+
+        <section class="info-grid">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>📍 123 Floral Lane, Springville</p>
+                <p>📞 (555) 123-4567</p>
+                <p>✉️ hello@blossomboutique.com</p>
+            </div>
+            
+            <div class="hours-info">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Blossom Boutique. All rights reserved.</p>
+    </footer>
+</body>
+</html>
