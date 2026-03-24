@@ -165,6 +165,7 @@ a {
   left: 0;
   background-color: var(--bs-primary);
   transition: var(--transition);
+  border: none !important; /* Removes Bootstrap's default dropdown caret */
 }
 
 .nav-link:hover::after, .nav-link.active::after {
@@ -275,4 +276,10 @@ a {
     border: 1px solid var(--border-light) !important;
     border-radius: 8px;
   }
+}
+
+/* Reset Bootstrap Dropdown Active State */
+.dropdown-item.active, .dropdown-item:active {
+  background-color: transparent !important;
+  color: var(--bs-primary) !important;
 }

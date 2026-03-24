@@ -59,7 +59,7 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="occasions.html" id="occasionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Occasions</a>
         <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="occasionsDropdown">
-            <li><a class="dropdown-item fw-bold text-primary" href="occasions.html">View All Occasions</a></li>
+            <li><a class="dropdown-item fw-bold" href="occasions.html">View All Occasions</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="occasion-birthday.html">Birthday</a></li>
             <li><a class="dropdown-item" href="occasion-anniversary.html">Anniversary</a></li>
@@ -71,7 +71,7 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
         <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
-            <li><a class="dropdown-item fw-bold text-primary" href="shop.html">All Collections</a></li>
+            <li><a class="dropdown-item fw-bold" href="shop.html">All Collections</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
             <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
@@ -196,6 +196,7 @@
             });
         });
     </script>
+
 <script>
     // Make desktop dropdown toggles clickable links instead of just opening menus
     document.querySelectorAll('.dropdown-toggle').forEach(item => {
@@ -205,6 +206,36 @@
             }
         });
     });
-</script>
-</body>
+
+    // Highlight active menu item
+    document.addEventListener("DOMContentLoaded", function() {
+        let currentPath = window.location.pathname.split("/").pop();
+        if (currentPath === "") currentPath = "index.html";
+        
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .dropdown-menu .dropdown-item');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPath) {
+                link.classList.add('active');
+                const parentDropdown = link.closest('.dropdown');
+                if (parentDropdown) {
+                    const toggle = parentDropdown.querySelector('.dropdown-toggle');
+                    if (toggle) toggle.classList.add('active');
+                }
+            }
+        });
+        
+        if (currentPath.startsWith('shop-')) {
+            const shopDropdown = document.getElementById('shopDropdown');
+            if (shopDropdown) shopDropdown.classList.add('active');
+        } else if (currentPath.startsWith('occasion-')) {
+            const occasionsDropdown = document.getElementById('occasionsDropdown');
+            if (occasionsDropdown) occasionsDropdown.classList.add('active');
+        } else if (currentPath === 'home-2.html') {
+            const homeDropdown = document.getElementById('homeDropdown');
+            if (homeDropdown) homeDropdown.classList.add('active');
+        }
+    });
+</script>\n</body>
 </html>
