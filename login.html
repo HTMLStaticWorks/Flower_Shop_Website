@@ -23,127 +23,60 @@
 
 <body class="bg-light">
 
-    <!-- Header Navigation (Exact Match to Index) -->
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand-custom px-3 px-lg-4">
-            <div class="container-fluid align-items-center">
 
-                <button class="navbar-toggler border-0 shadow-none ms-0 pe-2 mobile-only" type="button"
-                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                    aria-label="Toggle navigation">
-                    <span class="bi bi-list fs-1 text-primary"></span>
-                </button>
-
-                <a class="navbar-brand mx-auto mx-lg-0" href="index.html">
-                    <img src="assets/images/logo.svg" alt="Blossom Logo">
-                </a>
-
-                <button class="btn btn-link text-primary shadow-none mobile-only px-2" id="themeToggleMobile"
-                    aria-label="Toggle Theme">
-                    <i class="bi bi-moon-stars-fill fs-4"></i>
-                </button>
-
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header border-bottom">
-                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-
-                    <div class="offcanvas-body d-flex flex-column align-items-lg-center">
-                        <ul class="navbar-nav mx-lg-auto mb-4 mb-lg-0 align-items-lg-center gap-lg-3 fs-5 fs-lg-6">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Home</a>
-                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="homeDropdown">
-                                    <li><a class="dropdown-item" href="index.html">Classic Home</a></li>
-                                    <li><a class="dropdown-item" href="home-2.html">Modern Home</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="occasions.html" id="occasionsDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">Occasions</a>
-                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="occasionsDropdown">
-                                    <li><a class="dropdown-item fw-bold" href="occasions.html">View All Occasions</a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="occasion-birthday.html">Birthday</a></li>
-                                    <li><a class="dropdown-item" href="occasion-anniversary.html">Anniversary</a></li>
-                                    <li><a class="dropdown-item" href="occasion-love.html">Love & Romance</a></li>
-                                    <li><a class="dropdown-item" href="occasion-sympathy.html">Sympathy</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
-                                    <li><a class="dropdown-item fw-bold" href="shop.html">All Collections</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
-                                    <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
-                                    <li><a class="dropdown-item" href="shop-mixed.html">Mixed Bouquets</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-
-                        <div
-                            class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-auto mt-lg-0 ps-lg-3 border-lg-start">
-                            <button class="btn btn-link text-primary desktop-only" id="themeToggleDesktop"
-                                aria-label="Toggle Theme">
-                                <i class="bi bi-moon-stars-fill fs-5"></i>
-                            </button>
-                            <a href="login.html" class="btn btn-outline-primary w-100 w-lg-auto active">Login</a>
-                            <a href="register.html" class="btn btn-primary w-100 w-lg-auto">Sign Up</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
 
     <main class="min-vh-100 d-flex align-items-center py-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6 col-xl-5">
-                    <div class="card border-0 shadow p-4 p-md-5">
+                <div class="col-md-8 col-lg-6 col-xl-5 text-center">
+                    <div class="card border-0 shadow p-4 p-md-5 position-relative">
+                        <!-- Theme Toggle Button -->
+                        <button class="btn btn-link text-secondary position-absolute top-0 end-0 m-3 p-0 fs-4 shadow-none theme-toggle-btn" aria-label="Toggle Theme">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
                         <div class="text-center mb-4">
-                            <img src="assets/images/logo.svg" alt="Logo" style="height: 45px; margin-bottom: 1.5rem;">
-                            <h1 class="h3 fw-bold">Welcome Back</h1>
-                            <p class="text-muted">Sign in to your account</p>
+                            <a href="index.html" class="d-inline-block">
+                                <img src="assets/images/logo.svg" alt="Blossom Boutique Logo" style="height: 45px; margin-bottom: 1.5rem;">
+                            </a>
+                            <h1 class="h3 fw-bold mb-0">Welcome Back</h1>
                         </div>
 
-                        <form action="index.html">
+                        <form action="index.html" class="text-start">
                             <div class="mb-3">
                                 <label for="email" class="form-label fw-medium">Email address</label>
-                                <input type="email" class="form-control form-control-lg bg-light border-0 px-4"
+                                <input type="email" class="form-control form-control-lg px-4"
                                     id="email" placeholder="name@example.com" required>
                             </div>
 
                             <div class="mb-4">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <label for="password" class="form-label fw-medium mb-0">Password</label>
-                                    <a href="#" class="small text-primary text-decoration-none">Forgot password?</a>
-                                </div>
-                                <input type="password" class="form-control form-control-lg bg-light border-0 px-4"
+                                <label for="password" class="form-label fw-medium">Password</label>
+                                <input type="password" class="form-control form-control-lg px-4 mb-3"
                                     id="password" placeholder="••••••••" required>
-                            </div>
-
-                            <div class="mb-4 form-check">
-                                <input type="checkbox" class="form-check-input" id="rememberMe">
-                                <label class="form-check-label text-muted" for="rememberMe">Remember me</label>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="form-check mb-0">
+                                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                                        <label class="form-check-label text-muted small" for="rememberMe">Remember me</label>
+                                    </div>
+                                    <a href="#" class="small text-primary text-decoration-none fw-medium">Forgot password?</a>
+                                </div>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-lg w-100 mb-4">Sign In</button>
+
+                            <div class="d-flex align-items-center mb-4">
+                                <hr class="flex-grow-1 bg-secondary opacity-25">
+                                <span class="mx-3 text-muted small text-uppercase fw-medium">Or login with</span>
+                                <hr class="flex-grow-1 bg-secondary opacity-25">
+                            </div>
+
+                            <div class="d-flex justify-content-center gap-3 mb-4">
+                                <button type="button" class="btn btn-light border rounded-circle shadow-sm d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'" title="Google">
+                                    <i class="bi bi-google text-danger fs-4"></i>
+                                </button>
+                                <button type="button" class="btn btn-light border rounded-circle shadow-sm d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'" title="Facebook">
+                                    <i class="bi bi-facebook text-primary fs-4"></i>
+                                </button>
+                            </div>
 
                             <div class="text-center">
                                 <p class="text-muted mb-0">Don't have an account? <a href="register.html"
@@ -156,70 +89,12 @@
         </div>
     </main>
 
-    <!-- Footer (Exact Match) -->
-    <footer class="footer bg-white border-top py-5">
-        <div class="container pb-4">
-            <div class="row gy-4">
-                <div class="col-lg-4 pe-lg-5">
-                    <a href="index.html" class="d-inline-flex align-items-center mb-3 text-decoration-none">
-                        <img src="assets/images/logo.svg" alt="Blossom Logo" style="height: 40px;">
-                    </a>
-                    <p class="text-muted mb-4 small">Delivering joy and beautiful moments through lovingly arranged
-                        fresh flowers. Premium quality guaranteed.</p>
-                    <div class="d-flex gap-3 fs-5 text-muted">
-                        <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-pinterest"></i></a>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <h4 class="h6 fw-bold mb-3 text-dark">Company</h4>
-                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
-                        <li><a href="about.html" class="text-muted text-decoration-none text-primary-hover">About Us</a>
-                        </li>
-                        <li><a href="contact.html"
-                                class="text-muted text-decoration-none text-primary-hover">Contact</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Careers</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Press</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <h4 class="h6 fw-bold mb-3 text-dark">Support</h4>
-                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">FAQs</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Shipping</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Returns</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-lg-4">
-                    <h4 class="h6 fw-bold mb-3 text-dark">Join Our Newsletter</h4>
-                    <p class="text-muted small mb-3">Get 10% off your first order and stay updated on our latest
-                        collections.</p>
-                    <form class="d-flex w-100">
-                        <input type="email" class="form-control rounded-start-pill border-end-0 shadow-none px-4"
-                            placeholder="Email address" required>
-                        <button type="submit" class="btn btn-primary rounded-end-pill px-4">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="container pt-4 border-top mt-2">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-                <p class="text-muted small mb-0">&copy; 2026 Blossom Boutique. All rights reserved.</p>
-                <button class="btn btn-light rounded-circle shadow-sm"
-                    onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to top">
-                    <i class="bi bi-arrow-up"></i>
-                </button>
-            </div>
-        </div>
-    </footer>
+
 
     <!-- Bootstrap JS & Theme -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const themeToggles = document.querySelectorAll('#themeToggleDesktop, #themeToggleMobile');
+        const themeToggles = document.querySelectorAll('#themeToggleDesktop, #themeToggleMobile, .theme-toggle-btn');
         function setTheme(theme) {
             document.documentElement.setAttribute('data-bs-theme', theme);
             localStorage.setItem('theme', theme);

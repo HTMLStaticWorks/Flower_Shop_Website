@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bed & Breakfast Inn</title>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/vars.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="public-mode">
+
+    <!-- HEADER -->
+    <header class="public-header">
+        <div class="container public-header-content">
+
+
+
+        </div>
+
+        <div class="mobile-menu-overlay" id="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="index.html" class="brand-logo">Menu</a>
+                <button class="close-menu btn btn-secondary btn-sm">Close</button>
+            </div>
+
+            <nav class="mobile-nav-links">
+                <a href="index.html" class="nav-link">Classic (Home1)</a>
+                <a href="index-2.html" class="nav-link">Modern (Home2)</a>
+                <a href="about.html" class="nav-link">About the Inn</a>
+                <a href="rooms.html" class="nav-link">Our Rooms</a>
+                <a href="amenities.html" class="nav-link">Amenities</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="admin/index.html" class="nav-link">Admin Dashboard</a>
+            </nav>
+
+            <div class="mobile-auth-section">
+
+                <a href="signup.html" class="btn btn-primary w-full">Sign Up</a>
+            </div>
+
+            <div class="mobile-theme-rtl-bar">
+                <button class="btn btn-secondary mobile-theme-toggle" aria-label="Toggle Theme">Theme</button>
+
+            </div>
+        </div>
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="public-main" style="display:flex; align-items:center; justify-content:center; min-height:80vh;">
+        <div class="container" style="max-width: 480px; width:100%;">
+            <div class="auth-card"
+                style="position: relative; background: var(--color-bg-body); padding: var(--spacing-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); text-align: center; border: 1px solid rgba(47,79,79,0.1);">
+
+                <!-- Theme Toggle in Corner -->
+                <button class="btn btn-secondary btn-sm theme-toggle-btn"
+                    style="position: absolute; top: 1rem; right: 1rem; padding: 0.5rem; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;"
+                    aria-label="Toggle Theme">
+                    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="theme-icon icon-moon" style="width: 20px; height: 20px;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="theme-icon icon-sun" style="width: 20px; height: 20px;">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <div style="margin-bottom: var(--spacing-md); display: flex; justify-content: center;">
+                    <a href="index.html">
+                        <img src="public/images/logo.svg" alt="Bed & Breakfast Inn Logo" style="height: 60px;">
+                    </a>
+                </div>
+                <h1 class="page-title">Welcome Back</h1>
+
+                <form style="display: flex; flex-direction: column; gap: var(--spacing-md); text-align: left;"
+                    action="admin/index.html">
+                    <div>
+                        <label
+                            style="display:block; margin-bottom:var(--spacing-xs); font-size:var(--font-size-sm); font-weight:500;">Email
+                            Address</label>
+                        <input type="email" placeholder="you@example.com" value="admin@inn.com"
+                            style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-input-bg); color: var(--color-input-text);">
+                    </div>
+                    <div>
+                        <label
+                            style="display:block; margin-bottom:var(--spacing-xs); font-size:var(--font-size-sm); font-weight:500;">Password</label>
+                        <input type="password" placeholder="••••••••" value="password"
+                            style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-input-bg); color: var(--color-input-text);">
+                    </div>
+
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; font-size: var(--font-size-sm);">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="checkbox"
+                                style="width: 16px; height: 16px; accent-color: var(--color-primary);">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" style="color: var(--color-primary); font-weight: 500;">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"
+                        style="margin-top: var(--spacing-sm); width: 100%;">Login</button>
+
+                    <div style="display: flex; align-items: center; margin: var(--spacing-sm) 0;">
+                        <div style="flex: 1; height: 1px; background: var(--color-border);"></div>
+                        <span
+                            style="padding: 0 10px; font-size: var(--font-size-xs); color: var(--color-text-body); opacity: 0.6; text-transform: uppercase;">Or
+                            login with</span>
+                        <div style="flex: 1; height: 1px; background: var(--color-border);"></div>
+                    </div>
+
+                    <div class="social-auth-group">
+                        <button type="button" class="social-auth-btn" title="Google">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                    fill="#4285F4" />
+                                <path
+                                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                    fill="#34A853" />
+                                <path
+                                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+                                    fill="#FBBC05" />
+                                <path
+                                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-4.53z"
+                                    fill="#EA4335" />
+                            </svg>
+                        </button>
+                        <button type="button" class="social-auth-btn" title="Facebook">
+                            <svg viewBox="0 0 24 24" fill="#1877F2">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </button>
+                        <button type="button" class="social-auth-btn" title="Twitter">
+                            <svg viewBox="0 0 24 24" fill="#1DA1F2">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <p style="margin-top: var(--spacing-md); font-size: var(--font-size-sm); opacity: 0.8;">
+                    Don't have an account? <a href="signup.html"
+                        style="color:var(--color-primary);font-weight:600;">Sign up</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
