@@ -162,7 +162,7 @@ a {
   width: 0;
   height: 2px;
   bottom: 0px;
-  left: 0;
+  inset-inline-start: 0;
   background-color: var(--bs-primary);
   transition: var(--transition);
   border: none !important; /* Removes Bootstrap's default dropdown caret */
@@ -283,7 +283,7 @@ a {
   .navbar-expand-custom .offcanvas .dropdown-menu {
     position: absolute !important;
     top: 100%;
-    left: 0;
+    inset-inline-start: 0;
     min-width: 200px;
     z-index: 1050;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
@@ -324,13 +324,13 @@ button[aria-label="Back to top"] {
 }
 
 a[aria-label="WhatsApp"] {
-  right: 30px !important;
+  inset-inline-end: 30px !important;
   background-color: #25D366 !important;
   color: #fff !important;
 }
 
 button[aria-label="Back to top"] {
-  right: 100px !important; /* 30px (right) + 55px (width) + 15px (gap) = 100px */
+  inset-inline-end: 100px !important; /* 30px (right) + 55px (width) + 15px (gap) = 100px */
   background: linear-gradient(135deg, var(--bs-primary), var(--bs-info)) !important;
   color: #fff !important;
   border: none !important;
