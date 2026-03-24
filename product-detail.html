@@ -66,32 +66,12 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="occasions.html" id="occasionsDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">Occasions</a>
-                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="occasionsDropdown">
-                                    <li><a class="dropdown-item fw-bold" href="occasions.html">View All Occasions</a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="occasion-birthday.html">Birthday</a></li>
-                                    <li><a class="dropdown-item" href="occasion-anniversary.html">Anniversary</a></li>
-                                    <li><a class="dropdown-item" href="occasion-love.html">Love & Romance</a></li>
-                                    <li><a class="dropdown-item" href="occasion-sympathy.html">Sympathy</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                                 <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
-                                    <li><a class="dropdown-item fw-bold" href="shop.html">All Collections</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
                                     <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
                                     <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
-                                    <li><a class="dropdown-item" href="shop-mixed.html">Mixed Bouquets</a></li>
+                                    <li><a class="dropdown-item" href="occasions.html">Occasions</a></li>
                                 </ul>
                             </li>
 
@@ -99,7 +79,6 @@
                             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         </ul>
-
                         <!-- Actions -->
                         <div
                             class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-auto mt-lg-0 ps-lg-3 border-lg-start">
@@ -118,15 +97,7 @@
 
     <main class="py-5 bg-white">
         <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Home</a>
-                    </li>
-                    <li class="breadcrumb-item"><a href="shop.html" class="text-decoration-none text-muted">Shop</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">Pastel Dreams</li>
-                </ol>
-            </nav>
+
 
             <div class="row gy-5 mt-2">
                 <div class="col-lg-6 text-center">
@@ -166,71 +137,38 @@
         </div>
     </main>
 
-    <footer class="footer bg-white border-top py-5">
-        <div class="container pb-4">
-            <div class="row gy-4">
-                <!-- Branding -->
-                <div class="col-lg-4 pe-lg-5">
-                    <a href="index.html" class="d-inline-flex align-items-center mb-3 text-decoration-none">
-                        <img src="assets/images/logo.svg" alt="Blossom Logo" style="height: 40px;">
-                    </a>
-                    <p class="text-muted mb-4 small">Delivering joy and beautiful moments through lovingly arranged
-                        fresh flowers. Premium quality guaranteed.</p>
-                    <div class="d-flex gap-3 fs-5 text-muted">
-                        <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-pinterest"></i></a>
-                    </div>
-                </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const title = params.get('title');
+            const price = params.get('price');
+            const img = params.get('img');
 
-                <!-- Links -->
-                <div class="col-6 col-md-4 col-lg-2">
-                    <h4 class="h6 fw-bold mb-3 text-dark">Company</h4>
-                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
-                        <li><a href="about.html" class="text-muted text-decoration-none text-primary-hover">About Us</a>
-                        </li>
-                        <li><a href="contact.html"
-                                class="text-muted text-decoration-none text-primary-hover">Contact</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Careers</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Press</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-md-4 col-lg-2">
-                    <h4 class="h6 fw-bold mb-3 text-dark">Support</h4>
-                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">FAQs</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Shipping</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Returns</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="col-md-4 col-lg-4">
-                    <h4 class="h6 fw-bold mb-3 text-dark">Join Our Newsletter</h4>
-                    <p class="text-muted small mb-3">Get 10% off your first order and stay updated on our latest
-                        collections.</p>
-                    <form class="d-flex w-100">
-                        <input type="email" class="form-control rounded-start-pill border-end-0 shadow-none px-4"
-                            placeholder="Email address" required>
-                        <button type="submit" class="btn btn-primary rounded-end-pill px-4">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="container pt-4 border-top mt-2">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-                <p class="text-muted small mb-0">&copy; 2026 Blossom Boutique. All rights reserved.</p>
-                <button class="btn btn-light rounded-circle shadow-sm"
-                    onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to top">
-                    <i class="bi bi-arrow-up"></i>
-                </button>
-            </div>
-        </div>
-    </footer>
+            if (title) {
+                const h1 = document.querySelector('h1.display-5');
+                const breadcrumb = document.querySelector('.breadcrumb-item.active');
+                if (h1) h1.textContent = title;
+                if (breadcrumb) breadcrumb.textContent = title;
+                document.title = title + ' | Blossom Boutique';
+            }
+            if (price) {
+                const priceEl = document.querySelector('.fs-3.fw-bold.text-primary');
+                if (priceEl) priceEl.textContent = price;
+            }
+            if (img) {
+                const imgEl = document.querySelector('img.img-fluid.rounded-4');
+                if (imgEl) imgEl.src = img;
+            }
+            
+            // Pass params to checkout
+            if (title && price && img) {
+                const checkoutBtn = document.querySelector('a[href="checkout.html"]');
+                if (checkoutBtn) {
+                    checkoutBtn.href = `checkout.html?title=${encodeURIComponent(title)}&price=${encodeURIComponent(price)}&img=${encodeURIComponent(img)}`;
+                }
+            }
+        });
+    </script>
 
     <a href="https://wa.me/15551234567"
         class="position-fixed bottom-0 end-0 m-4 bg-success text-white rounded-circle d-flex align-items-center justify-content-center shadow-lg transition-transform hover-scale"
@@ -294,18 +232,15 @@
                 }
             });
 
-            if (currentPath.startsWith('shop-')) {
+            if (currentPath.startsWith('shop-') || currentPath.startsWith('occasion-') || currentPath === 'occasions.html' || currentPath === 'shop.html' || currentPath.startsWith('product-detail.html')) {
                 const shopDropdown = document.getElementById('shopDropdown');
                 if (shopDropdown) shopDropdown.classList.add('active');
-            } else if (currentPath.startsWith('occasion-')) {
-                const occasionsDropdown = document.getElementById('occasionsDropdown');
-                if (occasionsDropdown) occasionsDropdown.classList.add('active');
             } else if (currentPath === 'home-2.html') {
                 const homeDropdown = document.getElementById('homeDropdown');
                 if (homeDropdown) homeDropdown.classList.add('active');
             }
         });
-    </script>\n
+    </script>
 </body>
 
 </html>

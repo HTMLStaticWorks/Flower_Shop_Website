@@ -62,41 +62,19 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="occasions.html" id="occasionsDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">Occasions</a>
-                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="occasionsDropdown">
-                                    <li><a class="dropdown-item fw-bold" href="occasions.html">View All Occasions</a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="occasion-birthday.html">Birthday</a></li>
-                                    <li><a class="dropdown-item" href="occasion-anniversary.html">Anniversary</a></li>
-                                    <li><a class="dropdown-item" href="occasion-love.html">Love & Romance</a></li>
-                                    <li><a class="dropdown-item" href="occasion-sympathy.html">Sympathy</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                                 <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
-                                    <li><a class="dropdown-item fw-bold" href="shop.html">All Collections</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
                                     <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
                                     <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
-                                    <li><a class="dropdown-item" href="shop-mixed.html">Mixed Bouquets</a></li>
+                                    <li><a class="dropdown-item" href="occasions.html">Occasions</a></li>
                                 </ul>
                             </li>
 
                             <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-
-                        <div
+                        </ul> <div
                             class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-auto mt-lg-0 ps-lg-3 border-lg-start">
                             <button class="btn btn-link text-primary desktop-only" id="themeToggleDesktop"
                                 aria-label="Toggle Theme">
@@ -113,9 +91,9 @@
 
     <main class="py-5">
         <div class="container">
-            <div class="text-center mb-5">
+            <div class="d-flex flex-column align-items-center text-center mb-5">
                 <h1 class="display-5 fw-bold mb-2">Complete Your Order</h1>
-                <p class="text-muted"><i class="bi bi-lock-fill text-success"></i> Safe and secure checkout</p>
+                <p class="text-muted d-flex align-items-center gap-2"><i class="bi bi-lock-fill text-success"></i> Safe and secure checkout</p>
             </div>
 
             <form action="#" method="POST" id="checkout-form" class="row gy-5">
@@ -301,27 +279,27 @@
                 </div>
 
                 <!-- Right Column: Order Summary -->
-                <div class="col-lg-5 col-xl-4 text-center">
+                <div class="col-lg-5 col-xl-4 text-start">
                     <div class="card border-0 shadow-sm position-sticky" style="top: calc(var(--nav-height) + 2rem);">
                         <div class="card-body p-4 p-md-5">
-                            <h2 class="h4 fw-bold mb-4">Order Summary</h2>
+                            <h2 class="h4 fw-bold mb-4 text-center">Order Summary</h2>
 
                             <!-- Item -->
-                            <div class="d-flex gap-3 pb-3 mb-3 border-bottom">
-                                <img src="https://images.unsplash.com/photo-1523694576722-cbaec25026df?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-                                    class="rounded-3 object-fit-cover" style="width: 70px; height: 70px;"
-                                    alt="Pastel Dreams">
+                            <div class="d-flex align-items-center gap-3 pb-3 mb-3 border-bottom text-start">
+                                <img src="assets/images/products/flower-3.jpg"
+                                    class="rounded-3 object-fit-cover flex-shrink-0" style="width: 70px; height: 70px;"
+                                    alt="Pastel Dreams" id="summary-img">
                                 <div class="flex-grow-1">
-                                    <h3 class="h6 mb-1 fw-bold">Pastel Dreams</h3>
+                                    <h3 class="h6 mb-1 fw-bold" id="summary-title">Pastel Dreams</h3>
                                     <div class="small text-muted mb-1">Size: Standard</div>
                                     <div class="small text-muted">Delivery: Today</div>
                                 </div>
-                                <div class="fw-bold">$85.00</div>
+                                <div class="fw-bold fs-5" id="summary-price">$85.00</div>
                             </div>
 
                             <!-- Add-on -->
-                            <div class="d-flex gap-3 pb-3 mb-4 border-bottom">
-                                <div class="bg-light text-primary rounded-3 d-flex align-items-center justify-content-center"
+                            <div class="d-flex align-items-center gap-3 pb-3 mb-4 border-bottom text-start">
+                                <div class="bg-light text-primary rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
                                     style="width: 70px; height: 70px;">
                                     <i class="bi bi-cake-fill fs-3"></i>
                                 </div>
@@ -329,12 +307,12 @@
                                     <h3 class="h6 mb-0 fw-bold">Chocolate Truffle</h3>
                                     <div class="small text-muted">Add-on Item</div>
                                 </div>
-                                <div class="fw-bold d-flex align-items-center">$25.00</div>
+                                <div class="fw-bold fs-5 d-flex align-items-center">$25.00</div>
                             </div>
 
                             <div class="d-flex justify-content-between mb-2">
                                 <span class="text-muted">Subtotal</span>
-                                <span>$110.00</span>
+                                <span id="summary-subtotal">$110.00</span>
                             </div>
                             <div class="d-flex justify-content-between mb-3">
                                 <span class="text-muted">Delivery Fee</span>
@@ -343,17 +321,14 @@
 
                             <div class="d-flex justify-content-between border-top pt-3 mt-3 mb-4">
                                 <span class="h5 fw-bold mb-0">Total</span>
-                                <span class="h5 fw-bold text-primary mb-0">$110.00</span>
+                                <span class="h5 fw-bold text-primary mb-0" id="summary-total">$110.00</span>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-lg w-100 py-3 mb-3 fs-5">
                                 <i class="bi bi-lock-fill me-2"></i> Place Order
                             </button>
 
-                            <div class="text-center opacity-50">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Razorpay_logo.svg/512px-Razorpay_logo.svg.png"
-                                    alt="Secured by Razorpay" style="height: 18px; filter: grayscale(100%);">
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -377,25 +352,22 @@
                         <a href="#" class="text-muted text-primary-hover transition"><i class="bi bi-pinterest"></i></a>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-2">
+                                <div class="col-6 col-md-4 col-lg-2">
                     <h4 class="h6 fw-bold mb-3 text-dark">Company</h4>
                     <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
-                        <li><a href="about.html" class="text-muted text-decoration-none text-primary-hover">About Us</a>
-                        </li>
-                        <li><a href="contact.html"
-                                class="text-muted text-decoration-none text-primary-hover">Contact</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Careers</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Press</a></li>
+                        <li><a href="about.html" class="text-muted text-decoration-none text-primary-hover">About Us</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none text-primary-hover">Contact Us</a></li>
+                        <li><a href="gallery.html" class="text-muted text-decoration-none text-primary-hover">Our Gallery</a></li>
+                        <li><a href="occasions.html" class="text-muted text-decoration-none text-primary-hover">Occasions</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
-                    <h4 class="h6 fw-bold mb-3 text-dark">Support</h4>
+                    <h4 class="h6 fw-bold mb-3 text-dark">Quick Links</h4>
                     <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">FAQs</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Shipping</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Returns</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Privacy Policy</a>
-                        </li>
+                        <li><a href="shop.html" class="text-muted text-decoration-none text-primary-hover">Shop All Flowers</a></li>
+                        <li><a href="shop-roses.html" class="text-muted text-decoration-none text-primary-hover">Roses Collection</a></li>
+                        <li><a href="login.html" class="text-muted text-decoration-none text-primary-hover">My Account</a></li>
+                        <li><a href="register.html" class="text-muted text-decoration-none text-primary-hover">Register</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 col-lg-4">
@@ -424,6 +396,30 @@
     <!-- Bootstrap JS & Theme -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        
+        // Parse checkout params dynamically
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const title = params.get('title');
+            const priceStr = params.get('price');
+            const img = params.get('img');
+            
+            if (title) document.getElementById('summary-title').textContent = title;
+            if (img) document.getElementById('summary-img').src = img;
+            
+            if (priceStr) {
+                document.getElementById('summary-price').textContent = priceStr;
+                
+                // Calculate new totals (Add-on is $25)
+                const priceNum = parseFloat(priceStr.replace('$', ''));
+                if (!isNaN(priceNum)) {
+                    const total = priceNum + 25;
+                    document.getElementById('summary-subtotal').textContent = '$' + total.toFixed(2);
+                    document.getElementById('summary-total').textContent = '$' + total.toFixed(2);
+                }
+            }
+        });
+
         // Form interactivity
         document.querySelectorAll('.accordion-button').forEach(btn => {
             btn.addEventListener('click', function () {
@@ -518,18 +514,15 @@
                 }
             });
 
-            if (currentPath.startsWith('shop-')) {
+            if (currentPath.startsWith('shop-') || currentPath.startsWith('occasion-') || currentPath === 'occasions.html' || currentPath === 'shop.html' || currentPath.startsWith('checkout.html')) {
                 const shopDropdown = document.getElementById('shopDropdown');
                 if (shopDropdown) shopDropdown.classList.add('active');
-            } else if (currentPath.startsWith('occasion-')) {
-                const occasionsDropdown = document.getElementById('occasionsDropdown');
-                if (occasionsDropdown) occasionsDropdown.classList.add('active');
             } else if (currentPath === 'home-2.html') {
                 const homeDropdown = document.getElementById('homeDropdown');
                 if (homeDropdown) homeDropdown.classList.add('active');
             }
         });
-    </script>\n
+    </script>
 </body>
 
 </html>

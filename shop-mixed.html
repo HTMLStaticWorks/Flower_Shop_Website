@@ -66,32 +66,12 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="occasions.html" id="occasionsDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">Occasions</a>
-                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="occasionsDropdown">
-                                    <li><a class="dropdown-item fw-bold" href="occasions.html">View All Occasions</a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="occasion-birthday.html">Birthday</a></li>
-                                    <li><a class="dropdown-item" href="occasion-anniversary.html">Anniversary</a></li>
-                                    <li><a class="dropdown-item" href="occasion-love.html">Love & Romance</a></li>
-                                    <li><a class="dropdown-item" href="occasion-sympathy.html">Sympathy</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                                 <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
-                                    <li><a class="dropdown-item fw-bold" href="shop.html">All Collections</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
                                     <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
                                     <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
-                                    <li><a class="dropdown-item" href="shop-mixed.html">Mixed Bouquets</a></li>
+                                    <li><a class="dropdown-item" href="occasions.html">Occasions</a></li>
                                 </ul>
                             </li>
 
@@ -99,7 +79,6 @@
                             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         </ul>
-
                         <!-- Actions -->
                         <div
                             class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-auto mt-lg-0 ps-lg-3 border-lg-start">
@@ -117,11 +96,18 @@
     </header>
 
     <main class="bg-light">
-        <section class="py-5" style="background-color: var(--bg-white);">
-            <div class="container text-center">
-                <h1 class="display-4 fw-bold mb-3">Mixed Bouquets</h1>
-                <p class="lead text-muted mx-auto" style="max-width: 600px;">A colorful celebration of seasonal
-                    favorites crafted together.</p>
+        <section class="py-5 position-relative overflow-hidden"
+            style="background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.05) 0%, rgba(var(--bs-secondary-rgb), 0.05) 100%);">
+            <div class="position-absolute top-0 start-0 translate-middle rounded-circle bg-primary opacity-10 animate-breathe"
+                style="width: 400px; height: 400px; filter: blur(60px);"></div>
+            <div class="position-absolute bottom-0 end-0 translate-middle rounded-circle bg-info opacity-10 animate-breathe delay-2"
+                style="width: 300px; height: 300px; filter: blur(50px);"></div>
+
+            <div class="container text-center position-relative z-1 glass-panel py-5 px-3 animate-fade-in-up"
+                style="max-width: 800px; border-radius: 20px;">
+                <h1 class="display-4 fw-bold mb-3 text-primary">Mixed Bouquets</h1>
+                <p class="lead text-muted mx-auto mb-0" style="max-width: 600px;">A colorful celebration of seasonal
+                    favorites beautifully crafted together.</p>
             </div>
         </section>
         <section class="py-3 bg-white border-bottom shadow-sm">
@@ -140,172 +126,201 @@
                 <div class="row row-cols-1 row-cols-sm-2 g-5">
 
                     <div class="col">
-                        <div class="card border-0 shadow-sm h-100 product-card">
+                        <div
+                            class="card border-0 shadow-sm h-100 product-card modern-card-hover animate-fade-in-up delay-1">
                             <div class="position-absolute top-0 start-0 m-3"><span
                                     class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">Popular</span></div>
-                            <img src="assets/images/products/flower-0.jpg" class="card-img-top object-fit-cover"
-                                style="aspect-ratio: 4/3;" alt="Classic Red">
+                            <img src="assets/images/products/Velvet Romance.jfif" class="card-img-top object-fit-cover"
+                                style="aspect-ratio: 4/3;" alt="Crimson Rose and Stargazer Mix">
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h3 class="h5 fw-bold mb-0 text-dark">Classic Red</h3>
+                                    <h3 class="h5 fw-bold mb-0 text-dark">Crimson Rose and Stargazer Mix</h3>
                                     <span class="text-primary fw-bold fs-5">$60</span>
                                 </div>
                                 <p class="text-muted small mb-4">Premium Collection</p>
-                                <a href="product-detail.html" class="btn btn-outline-primary mt-auto w-100 py-2">View
+                                <a href="product-detail.html?title=Crimson%20Rose%20and%20Stargazer%20Mix&price=%2460&img=assets/images/products/Velvet%20Romance.jfif"
+                                    class="btn btn-outline-primary mt-auto w-100 py-2">View
                                     Details</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card border-0 shadow-sm h-100 product-card">
+                        <div
+                            class="card border-0 shadow-sm h-100 product-card modern-card-hover animate-fade-in-up delay-1">
 
-                            <img src="assets/images/products/flower-1.jpg" class="card-img-top object-fit-cover"
-                                style="aspect-ratio: 4/3;" alt="Pastel Dreams">
+                            <img src="assets/images/products/Pink Asiatic Lily.jfif"
+                                class="card-img-top object-fit-cover" style="aspect-ratio: 4/3;"
+                                alt="Blush Rose and Lily Symphony">
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h3 class="h5 fw-bold mb-0 text-dark">Pastel Dreams</h3>
+                                    <h3 class="h5 fw-bold mb-0 text-dark">Blush Rose and Lily Symphony</h3>
                                     <span class="text-primary fw-bold fs-5">$65</span>
                                 </div>
                                 <p class="text-muted small mb-4">Premium Collection</p>
-                                <a href="product-detail.html" class="btn btn-outline-primary mt-auto w-100 py-2">View
+                                <a href="product-detail.html?title=Blush%20Rose%20and%20Lily%20Symphony&price=%2465&img=assets/images/products/Pink%20Asiatic%20Lily.jfif"
+                                    class="btn btn-outline-primary mt-auto w-100 py-2">View
                                     Details</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card border-0 shadow-sm h-100 product-card">
+                        <div
+                            class="card border-0 shadow-sm h-100 product-card modern-card-hover animate-fade-in-up delay-1">
 
-                            <img src="assets/images/products/flower-2.jpg" class="card-img-top object-fit-cover"
-                                style="aspect-ratio: 4/3;" alt="Sunshine Yellow">
+                            <img src="assets/images/products/Yellow Trumpet Lily.jfif"
+                                class="card-img-top object-fit-cover" style="aspect-ratio: 4/3;"
+                                alt="Yellow Rose and Trumpet Lily">
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h3 class="h5 fw-bold mb-0 text-dark">Sunshine Yellow</h3>
+                                    <h3 class="h5 fw-bold mb-0 text-dark">Yellow Rose and Trumpet Lily</h3>
                                     <span class="text-primary fw-bold fs-5">$70</span>
                                 </div>
                                 <p class="text-muted small mb-4">Premium Collection</p>
-                                <a href="product-detail.html" class="btn btn-outline-primary mt-auto w-100 py-2">View
+                                <a href="product-detail.html?title=Yellow%20Rose%20and%20Trumpet%20Lily&price=%2470&img=assets/images/products/Yellow%20Trumpet%20Lily.jfif"
+                                    class="btn btn-outline-primary mt-auto w-100 py-2">View
                                     Details</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card border-0 shadow-sm h-100 product-card">
+                        <div
+                            class="card border-0 shadow-sm h-100 product-card modern-card-hover animate-fade-in-up delay-1">
 
-                            <img src="assets/images/products/flower-3.jpg" class="card-img-top object-fit-cover"
-                                style="aspect-ratio: 4/3;" alt="Ethereal White">
+                            <img src="assets/images/products/Blush Easter Lily.jfif"
+                                class="card-img-top object-fit-cover" style="aspect-ratio: 4/3;"
+                                alt="White Rose and Calla Elegance">
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h3 class="h5 fw-bold mb-0 text-dark">Ethereal White</h3>
+                                    <h3 class="h5 fw-bold mb-0 text-dark">White Rose and Calla Elegance</h3>
                                     <span class="text-primary fw-bold fs-5">$75</span>
                                 </div>
                                 <p class="text-muted small mb-4">Premium Collection</p>
-                                <a href="product-detail.html" class="btn btn-outline-primary mt-auto w-100 py-2">View
+                                <a href="product-detail.html?title=White%20Rose%20and%20Calla%20Elegance&price=%2475&img=assets/images/products/Blush%20Easter%20Lily.jfif"
+                                    class="btn btn-outline-primary mt-auto w-100 py-2">View
                                     Details</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card border-0 shadow-sm h-100 product-card">
+                        <div
+                            class="card border-0 shadow-sm h-100 product-card modern-card-hover animate-fade-in-up delay-1">
                             <div class="position-absolute top-0 start-0 m-3"><span
                                     class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">Popular</span></div>
-                            <img src="assets/images/products/flower-4.jpg" class="card-img-top object-fit-cover"
-                                style="aspect-ratio: 4/3;" alt="Vibrant Spring">
+                            <img src="assets/images/products/Vibrant Tiger Lily.jfif"
+                                class="card-img-top object-fit-cover" style="aspect-ratio: 4/3;"
+                                alt="Orange Rose and Tiger Lily">
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h3 class="h5 fw-bold mb-0 text-dark">Vibrant Spring</h3>
+                                    <h3 class="h5 fw-bold mb-0 text-dark">Orange Rose and Tiger Lily</h3>
                                     <span class="text-primary fw-bold fs-5">$80</span>
                                 </div>
                                 <p class="text-muted small mb-4">Premium Collection</p>
-                                <a href="product-detail.html" class="btn btn-outline-primary mt-auto w-100 py-2">View
+                                <a href="product-detail.html?title=Orange%20Rose%20and%20Tiger%20Lily&price=%2480&img=assets/images/products/Vibrant%20Tiger%20Lily.jfif"
+                                    class="btn btn-outline-primary mt-auto w-100 py-2">View
                                     Details</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card border-0 shadow-sm h-100 product-card">
+                        <div
+                            class="card border-0 shadow-sm h-100 product-card modern-card-hover animate-fade-in-up delay-1">
 
-                            <img src="assets/images/products/flower-5.jpg" class="card-img-top object-fit-cover"
-                                style="aspect-ratio: 4/3;" alt="Blush Peony Dream">
+                            <img src="assets/images/products/Pink Asiatic Lily.jfif"
+                                class="card-img-top object-fit-cover" style="aspect-ratio: 4/3;"
+                                alt="Pink Rose and Easter Lily">
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h3 class="h5 fw-bold mb-0 text-dark">Blush Peony Dream</h3>
+                                    <h3 class="h5 fw-bold mb-0 text-dark">Pink Rose and Easter Lily</h3>
                                     <span class="text-primary fw-bold fs-5">$85</span>
                                 </div>
                                 <p class="text-muted small mb-4">Premium Collection</p>
-                                <a href="product-detail.html" class="btn btn-outline-primary mt-auto w-100 py-2">View
+                                <a href="product-detail.html?title=Pink%20Rose%20and%20Easter%20Lily&price=%2485&img=assets/images/products/Pink%20Asiatic%20Lily.jfif"
+                                    class="btn btn-outline-primary mt-auto w-100 py-2">View
                                     Details</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card border-0 shadow-sm h-100 product-card">
+                        <div
+                            class="card border-0 shadow-sm h-100 product-card modern-card-hover animate-fade-in-up delay-1">
 
-                            <img src="assets/images/products/flower-6.jpg" class="card-img-top object-fit-cover"
-                                style="aspect-ratio: 4/3;" alt="Velvet Romance">
+                            <img src="assets/images/products/Golden Orienpet Lily.jfif"
+                                class="card-img-top object-fit-cover" style="aspect-ratio: 4/3;"
+                                alt="Red Rose and Asiatic Lily">
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h3 class="h5 fw-bold mb-0 text-dark">Velvet Romance</h3>
+                                    <h3 class="h5 fw-bold mb-0 text-dark">Red Rose and Asiatic Lily</h3>
                                     <span class="text-primary fw-bold fs-5">$90</span>
                                 </div>
                                 <p class="text-muted small mb-4">Premium Collection</p>
-                                <a href="product-detail.html" class="btn btn-outline-primary mt-auto w-100 py-2">View
+                                <a href="product-detail.html?title=Red%20Rose%20and%20Asiatic%20Lily&price=%2490&img=assets/images/products/Golden%20Orienpet%20Lily.jfif"
+                                    class="btn btn-outline-primary mt-auto w-100 py-2">View
                                     Details</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card border-0 shadow-sm h-100 product-card">
+                        <div
+                            class="card border-0 shadow-sm h-100 product-card modern-card-hover animate-fade-in-up delay-1">
 
-                            <img src="assets/images/products/flower-7.jpg" class="card-img-top object-fit-cover"
-                                style="aspect-ratio: 4/3;" alt="Morning Dew">
+                            <img src="assets/images/products/Golden Orienpet Lily.jfif"
+                                class="card-img-top object-fit-cover" style="aspect-ratio: 4/3;"
+                                alt="Peach Rose and Daylily Harmony">
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h3 class="h5 fw-bold mb-0 text-dark">Morning Dew</h3>
+                                    <h3 class="h5 fw-bold mb-0 text-dark">Peach Rose and Daylily Harmony</h3>
                                     <span class="text-primary fw-bold fs-5">$95</span>
                                 </div>
                                 <p class="text-muted small mb-4">Premium Collection</p>
-                                <a href="product-detail.html" class="btn btn-outline-primary mt-auto w-100 py-2">View
+                                <a href="product-detail.html?title=Peach%20Rose%20and%20Daylily%20Harmony&price=%2495&img=assets/images/products/Golden%20Orienpet%20Lily.jfif"
+                                    class="btn btn-outline-primary mt-auto w-100 py-2">View
                                     Details</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card border-0 shadow-sm h-100 product-card">
+                        <div
+                            class="card border-0 shadow-sm h-100 product-card modern-card-hover animate-fade-in-up delay-1">
 
-                            <img src="assets/images/products/flower-8.jpg" class="card-img-top object-fit-cover"
-                                style="aspect-ratio: 4/3;" alt="Golden Sunset">
+                            <img src="assets/images/products/Golden Orienpet Lily.jfif"
+                                class="card-img-top object-fit-cover" style="aspect-ratio: 4/3;"
+                                alt="Sunset Rose and Orienpet Lily">
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h3 class="h5 fw-bold mb-0 text-dark">Golden Sunset</h3>
+                                    <h3 class="h5 fw-bold mb-0 text-dark">Sunset Rose and Orienpet Lily</h3>
                                     <span class="text-primary fw-bold fs-5">$100</span>
                                 </div>
                                 <p class="text-muted small mb-4">Premium Collection</p>
-                                <a href="product-detail.html" class="btn btn-outline-primary mt-auto w-100 py-2">View
+                                <a href="product-detail.html?title=Sunset%20Rose%20and%20Orienpet%20Lily&price=%24100&img=assets/images/products/Golden%20Orienpet%20Lily.jfif"
+                                    class="btn btn-outline-primary mt-auto w-100 py-2">View
                                     Details</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card border-0 shadow-sm h-100 product-card">
+                        <div
+                            class="card border-0 shadow-sm h-100 product-card modern-card-hover animate-fade-in-up delay-1">
 
-                            <img src="assets/images/products/flower-9.jpg" class="card-img-top object-fit-cover"
-                                style="aspect-ratio: 4/3;" alt="Midnight Lily">
+                            <img src="assets/images/products/Midnight Calla Lily.jfif"
+                                class="card-img-top object-fit-cover" style="aspect-ratio: 4/3;"
+                                alt="Burgundy Rose and Midnight Calla">
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h3 class="h5 fw-bold mb-0 text-dark">Midnight Lily</h3>
+                                    <h3 class="h5 fw-bold mb-0 text-dark">Burgundy Rose and Midnight Calla</h3>
                                     <span class="text-primary fw-bold fs-5">$105</span>
                                 </div>
                                 <p class="text-muted small mb-4">Premium Collection</p>
-                                <a href="product-detail.html" class="btn btn-outline-primary mt-auto w-100 py-2">View
+                                <a href="product-detail.html?title=Burgundy%20Rose%20and%20Midnight%20Calla&price=%24105&img=assets/images/products/Midnight%20Calla%20Lily.jfif"
+                                    class="btn btn-outline-primary mt-auto w-100 py-2">View
                                     Details</a>
                             </div>
                         </div>
@@ -317,7 +332,8 @@
         <section class="py-5 bg-white text-center">
             <div class="container">
                 <h2 class="h3 fw-bold mb-3">Can't decide? Let us help!</h2>
-                <p class="text-muted mb-4 mx-auto text-center" style="max-width: 600px;">Our florists are ready to craft a custom arrangement specifically for your
+                <p class="text-muted mb-4 mx-auto text-center" style="max-width: 600px;">Our florists are ready to craft
+                    a custom arrangement specifically for your
                     needs.</p>
                 <a href="contact.html" class="btn btn-primary px-4 py-2">Contact a Florist</a>
             </div>
@@ -347,21 +363,25 @@
                     <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
                         <li><a href="about.html" class="text-muted text-decoration-none text-primary-hover">About Us</a>
                         </li>
-                        <li><a href="contact.html"
-                                class="text-muted text-decoration-none text-primary-hover">Contact</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Careers</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Press</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none text-primary-hover">Contact
+                                Us</a></li>
+                        <li><a href="gallery.html" class="text-muted text-decoration-none text-primary-hover">Our
+                                Gallery</a></li>
+                        <li><a href="occasions.html"
+                                class="text-muted text-decoration-none text-primary-hover">Occasions</a></li>
                     </ul>
                 </div>
-
                 <div class="col-6 col-md-4 col-lg-2">
-                    <h4 class="h6 fw-bold mb-3 text-dark">Support</h4>
+                    <h4 class="h6 fw-bold mb-3 text-dark">Quick Links</h4>
                     <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">FAQs</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Shipping</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Returns</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none text-primary-hover">Privacy Policy</a>
-                        </li>
+                        <li><a href="shop.html" class="text-muted text-decoration-none text-primary-hover">Shop All
+                                Flowers</a></li>
+                        <li><a href="shop-roses.html" class="text-muted text-decoration-none text-primary-hover">Roses
+                                Collection</a></li>
+                        <li><a href="login.html" class="text-muted text-decoration-none text-primary-hover">My
+                                Account</a></li>
+                        <li><a href="register.html"
+                                class="text-muted text-decoration-none text-primary-hover">Register</a></li>
                     </ul>
                 </div>
 
@@ -452,18 +472,15 @@
                 }
             });
 
-            if (currentPath.startsWith('shop-')) {
+            if (currentPath.startsWith('shop-') || currentPath.startsWith('occasion-') || currentPath === 'occasions.html' || currentPath === 'shop.html') {
                 const shopDropdown = document.getElementById('shopDropdown');
                 if (shopDropdown) shopDropdown.classList.add('active');
-            } else if (currentPath.startsWith('occasion-')) {
-                const occasionsDropdown = document.getElementById('occasionsDropdown');
-                if (occasionsDropdown) occasionsDropdown.classList.add('active');
             } else if (currentPath === 'home-2.html') {
                 const homeDropdown = document.getElementById('homeDropdown');
                 if (homeDropdown) homeDropdown.classList.add('active');
             }
         });
-    </script>\n
+    </script>
 </body>
 
 </html>

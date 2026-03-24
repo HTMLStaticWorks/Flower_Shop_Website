@@ -13,25 +13,20 @@ new_nav = """<ul class="navbar-nav mx-lg-auto mb-4 mb-lg-0 align-items-lg-center
     </li>
     
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="occasions.html" id="occasionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Occasions</a>
-        <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="occasionsDropdown">
-            <li><a class="dropdown-item fw-bold" href="occasions.html">View All Occasions</a></li>
+        <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+        <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
+            <li><h6 class="dropdown-header text-primary fw-bold">Flowers</h6></li>
+            <li><a class="dropdown-item fw-bold" href="shop.html">All Collections</a></li>
+            <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
+            <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
+            <li><a class="dropdown-item" href="shop-mixed.html">Mixed Bouquets</a></li>
             <li><hr class="dropdown-divider"></li>
+            <li><h6 class="dropdown-header text-primary fw-bold">Occasions</h6></li>
+            <li><a class="dropdown-item fw-bold" href="occasions.html">View All Occasions</a></li>
             <li><a class="dropdown-item" href="occasion-birthday.html">Birthday</a></li>
             <li><a class="dropdown-item" href="occasion-anniversary.html">Anniversary</a></li>
             <li><a class="dropdown-item" href="occasion-love.html">Love & Romance</a></li>
             <li><a class="dropdown-item" href="occasion-sympathy.html">Sympathy</a></li>
-        </ul>
-    </li>
-    
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-        <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
-            <li><a class="dropdown-item fw-bold" href="shop.html">All Collections</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
-            <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
-            <li><a class="dropdown-item" href="shop-mixed.html">Mixed Bouquets</a></li>
         </ul>
     </li>
     
@@ -80,12 +75,9 @@ new_js_snippet = """<script>
             }
         });
         
-        if (currentPath.startsWith('shop-')) {
+        if (currentPath.startsWith('shop-') || currentPath.startsWith('occasion-') || currentPath === 'occasions.html' || currentPath === 'shop.html') {
             const shopDropdown = document.getElementById('shopDropdown');
             if (shopDropdown) shopDropdown.classList.add('active');
-        } else if (currentPath.startsWith('occasion-')) {
-            const occasionsDropdown = document.getElementById('occasionsDropdown');
-            if (occasionsDropdown) occasionsDropdown.classList.add('active');
         } else if (currentPath === 'home-2.html') {
             const homeDropdown = document.getElementById('homeDropdown');
             if (homeDropdown) homeDropdown.classList.add('active');

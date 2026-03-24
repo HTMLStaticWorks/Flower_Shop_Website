@@ -78,33 +78,22 @@ for f in os.listdir('.'):
     with open(f, 'r', encoding='utf-8') as file:
         content = file.read()
         
-    start_body = '<div class="offcanvas-body d-flex flex-column align-items-lg-center">\\n'
-    if start_body not in content:
-        start_body = '<div class="offcanvas-body d-flex flex-column align-items-lg-center">\\r\\n'
+    # Find start and end using regex
+    pat = re.compile(r'(<div class="offcanvas-body d-flex flex-column align-items-lg-center">\s*)(<ul.*?)(<!-- Actions -->)', re.DOTALL)
     
-    end_body = '                        <!-- Actions -->'
-    
-    # 1. replace navbar
-    start_idx = content.find(start_body)
-    end_idx = content.find(end_body)
-    
-    if start_idx != -1 and end_idx != -1:
-        content = content[:start_idx + len(start_body)] + new_nav + '\\n\\n' + content[end_idx:]
+    match = pat.search(content)
+    if match:
+        content = content[:match.start(2)] + new_nav + '\\n\\n                        ' + content[match.start(3):]
+    else:
+        print(f"Could not find nav in {f}")
         
-    # 2. replace trailing scripts
-    # Find the `<script>` tag that contains 'Make desktop dropdown toggles clickable links'
-    # Actually, we can just split at that tag and replace everything after it with new_js_snippet
-    # There are multiple <script> tags, but the first one related to nav might be heavily indented or unindented
-    # Let's search for "Make desktop dropdown toggles clickable links"
-    
-    js_marker = "// Make desktop dropdown toggles clickable links"
-    marker_idx = content.find(js_marker)
-    
-    if marker_idx != -1:
-        # Walk back to the opening <script> tag
-        script_idx = content.rfind('<script>', 0, marker_idx)
-        if script_idx != -1:
-            content = content[:script_idx] + new_js_snippet + "\\n</html>"
+    # Replace scripts
+    pat_script = re.compile(r'(<script>\s*// Make desktop dropdown toggles clickable links.*)(</body>\s*</html>|</body>\s*|</html>\s*)', re.DOTALL)
+    match_script = pat_script.search(content)
+    if match_script:
+        content = content[:match_script.start(1)] + new_js_snippet + '\\n</html>'
+    else:
+        print(f"Could not find scripts in {f}")
 
     with open(f, 'w', encoding='utf-8') as file:
         file.write(content)

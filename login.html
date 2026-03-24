@@ -31,12 +31,15 @@
                 <div class="col-md-8 col-lg-6 col-xl-5 text-center">
                     <div class="card border-0 shadow p-4 p-md-5 position-relative">
                         <!-- Theme Toggle Button -->
-                        <button class="btn btn-link text-secondary position-absolute top-0 end-0 m-3 p-0 fs-4 shadow-none theme-toggle-btn" aria-label="Toggle Theme">
+                        <button
+                            class="btn btn-link text-secondary position-absolute top-0 end-0 m-3 p-0 fs-4 shadow-none theme-toggle-btn"
+                            aria-label="Toggle Theme">
                             <i class="bi bi-moon-stars-fill"></i>
                         </button>
                         <div class="text-center mb-4">
                             <a href="index.html" class="d-inline-block">
-                                <img src="assets/images/logo.svg" alt="Blossom Boutique Logo" style="height: 45px; margin-bottom: 1.5rem;">
+                                <img src="assets/images/logo.svg" alt="Blossom Boutique Logo"
+                                    style="height: 45px; margin-bottom: 1.5rem;">
                             </a>
                             <h1 class="h3 fw-bold mb-0">Welcome Back</h1>
                         </div>
@@ -44,20 +47,22 @@
                         <form action="index.html" class="text-start">
                             <div class="mb-3">
                                 <label for="email" class="form-label fw-medium">Email address</label>
-                                <input type="email" class="form-control form-control-lg px-4"
-                                    id="email" placeholder="name@example.com" required>
+                                <input type="email" class="form-control form-control-lg px-4" id="email"
+                                    placeholder="name@example.com" required>
                             </div>
 
                             <div class="mb-4">
                                 <label for="password" class="form-label fw-medium">Password</label>
-                                <input type="password" class="form-control form-control-lg px-4 mb-3"
-                                    id="password" placeholder="••••••••" required>
+                                <input type="password" class="form-control form-control-lg px-4 mb-3" id="password"
+                                    placeholder="••••••••" required>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="form-check mb-0">
                                         <input type="checkbox" class="form-check-input" id="rememberMe">
-                                        <label class="form-check-label text-muted small" for="rememberMe">Remember me</label>
+                                        <label class="form-check-label text-muted small" for="rememberMe">Remember
+                                            me</label>
                                     </div>
-                                    <a href="#" class="small text-primary text-decoration-none fw-medium">Forgot password?</a>
+                                    <a href="#" class="small text-primary text-decoration-none fw-medium">Forgot
+                                        password?</a>
                                 </div>
                             </div>
 
@@ -70,10 +75,18 @@
                             </div>
 
                             <div class="d-flex justify-content-center gap-3 mb-4">
-                                <button type="button" class="btn btn-light border rounded-circle shadow-sm d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'" title="Google">
+                                <button type="button"
+                                    class="btn btn-light border rounded-circle shadow-sm d-flex align-items-center justify-content-center"
+                                    style="width: 50px; height: 50px; transition: transform 0.2s ease;"
+                                    onmouseover="this.style.transform='translateY(-2px)'"
+                                    onmouseout="this.style.transform='none'" title="Google">
                                     <i class="bi bi-google text-danger fs-4"></i>
                                 </button>
-                                <button type="button" class="btn btn-light border rounded-circle shadow-sm d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'" title="Facebook">
+                                <button type="button"
+                                    class="btn btn-light border rounded-circle shadow-sm d-flex align-items-center justify-content-center"
+                                    style="width: 50px; height: 50px; transition: transform 0.2s ease;"
+                                    onmouseover="this.style.transform='translateY(-2px)'"
+                                    onmouseout="this.style.transform='none'" title="Facebook">
                                     <i class="bi bi-facebook text-primary fs-4"></i>
                                 </button>
                             </div>
@@ -140,18 +153,15 @@
                 }
             });
 
-            if (currentPath.startsWith('shop-')) {
+            if (currentPath.startsWith('shop-') || currentPath.startsWith('occasion-') || currentPath === 'occasions.html' || currentPath === 'shop.html') {
                 const shopDropdown = document.getElementById('shopDropdown');
                 if (shopDropdown) shopDropdown.classList.add('active');
-            } else if (currentPath.startsWith('occasion-')) {
-                const occasionsDropdown = document.getElementById('occasionsDropdown');
-                if (occasionsDropdown) occasionsDropdown.classList.add('active');
             } else if (currentPath === 'home-2.html') {
                 const homeDropdown = document.getElementById('homeDropdown');
                 if (homeDropdown) homeDropdown.classList.add('active');
             }
         });
-    </script>\n
+    </script>
 </body>
 
 </html>
