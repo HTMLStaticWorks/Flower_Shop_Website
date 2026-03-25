@@ -188,8 +188,65 @@ a {
     display: flex !important;
   }
   .desktop-only { display: none !important; }
+
+  /* Override Bootstrap lg classes to keep mobile layout up to 1100px */
+  .navbar-expand-custom .offcanvas-body {
+    align-items: center !important;
+  }
+  .navbar-expand-custom .navbar-nav {
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .navbar-expand-custom .offcanvas-body .d-flex.flex-lg-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    margin-top: auto !important;
+    align-self: stretch !important;
+  }
+  .navbar-expand-custom .offcanvas-body .mt-lg-0 {
+    margin-top: auto !important;
+  }
+  .navbar-expand-custom .offcanvas-body .ps-lg-3 {
+    padding-left: 0 !important;
+  }
+  .navbar-expand-custom .offcanvas-body .border-lg-start {
+    border-left: 0 !important;
+  }
+  .navbar-expand-custom .offcanvas-body .btn.w-lg-auto {
+    width: 100% !important;
+  }
+
+  /* Refined Underline: Centered and "less" (shorter) */
+  .navbar-expand-custom .nav-link::after {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    inset-inline-start: auto !important;
+    inset-inline-end: auto !important;
+  }
+  .navbar-expand-custom .nav-link:hover::after, 
+  .navbar-expand-custom .nav-link.active::after {
+    width: 30px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
 }
 @media (min-width: 1100px) {
+  .navbar-expand-custom .nav-link:hover::after, 
+  .navbar-expand-custom .nav-link.active::after {
+    width: 30px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  .navbar-expand-custom .nav-link::after {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    inset-inline-start: auto !important;
+    inset-inline-end: auto !important;
+  }
   .navbar-expand-custom .navbar-toggler {
     display: none;
   }
@@ -447,4 +504,12 @@ button[aria-label="Back to top"]:hover i {
   background: rgba(255, 255, 255, 0.4) !important;
   transform: translateY(-4px) scale(1.1) !important;
   box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+/* Contact Page Refinements */
+.contact-email {
+  font-size: clamp(0.85rem, 4vw, 1.25rem) !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

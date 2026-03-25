@@ -155,6 +155,7 @@
             const title = params.get('title');
             const price = params.get('price');
             const img = params.get('img');
+            const desc = params.get('desc');
 
             if (title) {
                 const h1 = document.querySelector('h1.display-5');
@@ -171,12 +172,18 @@
                 const imgEl = document.querySelector('img.img-fluid.rounded-4');
                 if (imgEl) imgEl.src = img;
             }
+            if (desc) {
+                const descEl = document.querySelector('.ps-lg-4 p.text-muted.mb-4');
+                if (descEl) descEl.textContent = desc;
+            }
             
             // Pass params to checkout
             if (title && price && img) {
                 const checkoutBtn = document.querySelector('a[href="checkout.html"]');
                 if (checkoutBtn) {
-                    checkoutBtn.href = `checkout.html?title=${encodeURIComponent(title)}&price=${encodeURIComponent(price)}&img=${encodeURIComponent(img)}`;
+                    let checkoutUrl = `checkout.html?title=${encodeURIComponent(title)}&price=${encodeURIComponent(price)}&img=${encodeURIComponent(img)}`;
+                    if (desc) checkoutUrl += `&desc=${encodeURIComponent(desc)}`;
+                    checkoutBtn.href = checkoutUrl;
                 }
             }
         });
