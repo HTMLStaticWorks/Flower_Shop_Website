@@ -438,3 +438,13 @@ button[aria-label="Back to top"]:hover i {
 .delay-2 { animation-delay: 0.30s; }
 .delay-3 { animation-delay: 0.45s; }
 .delay-4 { animation-delay: 0.60s; }
+
+/* Contact Page Social Icons */
+.social-icon-contact {
+  transition: all 0.3s ease !important;
+}
+.social-icon-contact:hover {
+  background: rgba(255, 255, 255, 0.4) !important;
+  transform: translateY(-4px) scale(1.1) !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
