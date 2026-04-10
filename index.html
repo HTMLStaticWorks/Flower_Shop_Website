@@ -15,12 +15,44 @@
         rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .hero-bg-accent {
+            position: absolute;
+            top: 10%;
+            right: 0;
+            width: 40%;
+            height: 80%;
+            background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.1), transparent);
+            border-radius: 100px 0 0 100px;
+            z-index: -1;
+        }
+
+        .hero-img-wrapper {
+            position: relative;
+            padding: 20px;
+        }
+
+        .hero-img-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--primary);
+            border-radius: 20px;
+            transform: translate(20px, 20px);
+            z-index: -1;
+        }
+    </style>
 </head>
 
 <body class="bg-light">
@@ -44,7 +76,7 @@
                 <div class="d-flex align-items-center gap-1 mobile-only">
                     <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleMobile"
                         aria-label="Toggle RTL">
-                        <i class="bi bi-translate fs-4"></i>
+                        <span class="fw-bold small">RTL</span>
                     </button>
                     <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleMobile"
                         aria-label="Toggle Theme">
@@ -91,7 +123,7 @@
                             <div class="d-flex align-items-center gap-1 desktop-only">
                                 <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleDesktop"
                                     aria-label="Toggle RTL" title="Toggle RTL">
-                                    <i class="bi bi-translate fs-5"></i>
+                                    <span class="fw-bold small">RTL</span>
                                 </button>
                                 <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleDesktop"
                                     aria-label="Toggle Theme">
@@ -107,91 +139,128 @@
         </nav>
     </header>
 
-    <main class="bg-light">
-        <section class="py-5 py-lg-7 hero-section" style="background-color: var(--bs-secondary);">
-            <div class="container">
+    <main class="bg-light overflow-hidden">
+        <!-- Premium Asymmetrical Hero -->
+        <section class="hero-section position-relative overflow-hidden">
+            <div class="hero-bg-accent animate-fade-in-right"></div>
+            <div class="container position-relative" style="z-index: 2;">
                 <div class="row align-items-center gy-5">
-                    <div class="col-lg-6 text-center">
-                        <h1 class="display-3 fw-bold mb-4 text-dark">Send Love with Flowers Today</h1>
-                        <p class="lead opacity-75 text-dark mb-5">Beautiful, hand-crafted floral arrangements for every
-                            special moment. Bringing joy to your loved ones with our fresh blooms.</p>
-                        <div class="d-flex flex-wrap gap-3 justify-content-center">
-                            <a href="shop.html" class="btn btn-primary btn-lg px-4 border-0">Order Now</a>
-                            <a href="occasions.html" class="btn btn-outline-dark btn-lg px-4 fw-bold">Explore
-                                Occasions</a>
+                    <div class="col-lg-7" data-reveal="fade-right">
+                        <span
+                            class="badge bg-primary px-3 py-2 rounded-pill shadow-sm mb-4 text-uppercase tracking-wider">Premium
+                            Floral Art</span>
+                        <h1 class="display-1 fw-bold mb-4 text-dark lh-sm">Elegance in <span
+                                class="text-primary italic">Every</span> Petal</h1>
+                        <p class="lead opacity-75 text-dark mb-5 pe-lg-5 fs-4">Curating high-fidelity, hand-crafted
+                            arrangements that redefine the art of gifting. Experience freshness delivered with a
+                            personal touch.</p>
+                        <div class="d-flex flex-wrap gap-4 mt-2">
+                            <a href="shop.html" class="btn btn-primary btn-lg px-5 border-0 shadow-lg">Explore Shop</a>
+                            <a href="occasions.html" class="btn btn-outline-primary btn-lg px-5">Occasions</a>
                         </div>
                     </div>
-                    <div class="col-lg-6 text-center position-relative">
-                        <img src="assets/images/hero.jpg" alt="Beautiful flower arrangement"
-                            class="img-fluid rounded-4 shadow-lg w-100"
-                            style="aspect-ratio: 4/3; object-fit: cover; max-width: 500px;">
+                    <div class="col-lg-5" data-reveal="scale-up" data-delay="200">
+                        <div class="hero-img-wrapper animate-float">
+                            <img src="assets/images/hero.png" alt="Premium flower arrangement"
+                                class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="aspect-ratio: 4/5;">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="py-5 bg-white border-bottom">
+
+        <!-- Glassmorphism Features -->
+        <section class="py-0 position-relative" style="margin-top: -60px; z-index: 10;">
             <div class="container">
-                <div class="row g-4 text-center">
-                    <div class="col-md-4 text-center">
-                        <div class="p-4"><i class="bi bi-truck display-4 text-primary mb-3"></i>
-                            <h3 class="h5 fw-bold">Same-Day Delivery</h3>
-                            <p class="text-muted text-sm">Order before 4 PM for fast delivery.</p>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4" data-reveal="fade-up" data-delay="100">
+                        <div class="glass-panel feat-card text-center h-100">
+                            <i class="bi bi-truck text-primary"></i>
+                            <h3 class="h4 fw-bold mb-3">Priority Delivery</h3>
+                            <p class="text-muted mb-0 mx-auto" style="max-width: 280px;">White-glove, same-day delivery
+                                across the city for orders before 4 PM.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center">
-                        <div class="p-4"><i class="bi bi-flower1 display-4 text-primary mb-3"></i>
-                            <h3 class="h5 fw-bold">Farm Fresh Blooms</h3>
-                            <p class="text-muted text-sm">Sourced directly from local farms.</p>
+                    <div class="col-md-4" data-reveal="fade-up" data-delay="200">
+                        <div class="glass-panel feat-card text-center h-100">
+                            <i class="bi bi-flower1 text-primary"></i>
+                            <h3 class="h4 fw-bold mb-3">Farm-to-Vase</h3>
+                            <p class="text-muted mb-0 mx-auto" style="max-width: 280px;">Sourced from sustainable local
+                                growers to ensure 7-day pristine freshness.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center">
-                        <div class="p-4"><i class="bi bi-heart display-4 text-primary mb-3"></i>
-                            <h3 class="h5 fw-bold">100% Satisfaction</h3>
-                            <p class="text-muted text-sm">We guarantee perfectly arranged bouquets.</p>
+                    <div class="col-md-4" data-reveal="fade-up" data-delay="300">
+                        <div class="glass-panel feat-card text-center h-100">
+                            <i class="bi bi-heart text-primary"></i>
+                            <h3 class="h4 fw-bold mb-3">Curated with Passion</h3>
+                            <p class="text-muted mb-0 mx-auto" style="max-width: 280px;">Each bouquet is a custom
+                                masterpiece designed by our master florists.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section-padding bg-light">
+
+        <!-- Modern Occasion Collection -->
+        <section class="section-padding bg-white">
             <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bold mb-3">Shop by Occasion</h2>
+                <div class="text-center mb-6" data-reveal="fade-up">
+                    <span
+                        class="text-primary fw-bold text-uppercase tracking-widest small mb-2 d-block">Collections</span>
+                    <h2 class="display-4 fw-bold mb-4">Shop by Occasion</h2>
                 </div>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 justify-content-center">
-                    <div class="col"><a href="occasions.html#birthday"
-                            class="card h-100 text-decoration-none border-0 shadow-sm text-center">
-                            <div class="card-body py-5">
-                                <h3 class="h4 card-title fw-bold text-dark">Birthday</h3>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-6 col-md-3 text-center" data-reveal="scale-up" data-delay="100">
+                        <a href="occasions.html#birthday" class="text-decoration-none text-dark category-link">
+                            <div class="rounded-circle overflow-hidden mb-3 mx-auto shadow-sm category-img modern-card-hover"
+                                style="width: 160px; height: 160px;">
+                                <img src="assets/images/products/Blush Peony Dream.jfif" alt="Birthday"
+                                    class="w-100 h-100 object-fit-cover">
                             </div>
-                        </a></div>
-                    <div class="col"><a href="occasions.html#anniversary"
-                            class="card h-100 text-decoration-none border-0 shadow-sm text-center">
-                            <div class="card-body py-5">
-                                <h3 class="h4 card-title fw-bold text-dark">Anniversary</h3>
+                            <h3 class="h5 fw-bold">Birthday</h3>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 text-center" data-reveal="scale-up" data-delay="200">
+                        <a href="occasions.html#anniversary" class="text-decoration-none text-dark category-link">
+                            <div class="rounded-circle overflow-hidden mb-3 mx-auto shadow-sm category-img modern-card-hover"
+                                style="width: 160px; height: 160px;">
+                                <img src="assets/images/products/Crimson Rose and Stargazer Mix.jfif" alt="Anniversary"
+                                    class="w-100 h-100 object-fit-cover">
                             </div>
-                        </a></div>
-                    <div class="col"><a href="occasions.html#love"
-                            class="card h-100 text-decoration-none border-0 shadow-sm text-center">
-                            <div class="card-body py-5">
-                                <h3 class="h4 card-title fw-bold text-dark">Romance</h3>
+                            <h3 class="h5 fw-bold">Anniversary</h3>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 text-center" data-reveal="scale-up" data-delay="300">
+                        <a href="occasions.html#romance" class="text-decoration-none text-dark category-link">
+                            <div class="rounded-circle overflow-hidden mb-3 mx-auto shadow-sm category-img modern-card-hover"
+                                style="width: 160px; height: 160px;">
+                                <img src="assets/images/products/Velvet Romance.jfif" alt="Romance"
+                                    class="w-100 h-100 object-fit-cover">
                             </div>
-                        </a></div>
-                    <div class="col"><a href="occasions.html#sympathy"
-                            class="card h-100 text-decoration-none border-0 shadow-sm text-center">
-                            <div class="card-body py-5">
-                                <h3 class="h4 card-title fw-bold text-dark">Sympathy</h3>
+                            <h3 class="h5 fw-bold">Romance</h3>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 text-center" data-reveal="scale-up" data-delay="400">
+                        <a href="occasions.html#sympathy" class="text-decoration-none text-dark category-link">
+                            <div class="rounded-circle overflow-hidden mb-3 mx-auto shadow-sm category-img modern-card-hover"
+                                style="width: 160px; height: 160px;">
+                                <img src="assets/images/products/Pure White Calla.jfif" alt="Sympathy"
+                                    class="w-100 h-100 object-fit-cover">
                             </div>
-                        </a></div>
+                            <h3 class="h5 fw-bold">Sympathy</h3>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="section-padding bg-white border-top">
-            <div class="container" style="max-width: 1000px;">
-                <div class="text-center mb-5">
+        <!-- Featured Bestsellers -->
+        <section class="section-padding bg-light border-top">
+            <div class="container" style="max-width: 1100px;">
+                <div class="text-center mb-6" data-reveal="fade-up">
                     <h2 class="display-5 fw-bold mb-3">Featured Bestsellers</h2>
+                    <p class="text-muted text-center mx-auto">Our most loved arrangements, trending this week.</p>
                 </div>
-                <div class="row row-cols-1 row-cols-sm-2 g-5">
+                <div class="row row-cols-1 row-cols-md-2 g-5">
 
                     <div class="col">
                         <div class="card border-0 shadow-sm h-100 product-card">
@@ -379,14 +448,51 @@
                 </div>
             </div>
         </section>
-        <section class="py-5 bg-primary text-white text-center">
-            <div class="container py-4">
-                <h2 class="display-5 fw-bold mb-3 text-white">Join the Blossom Club</h2>
-                <p class="lead mb-4 mx-auto text-white opacity-75" style="max-width:600px;">Sign up today and get 15%
-                    off your first luxury arrangement.</p>
-                <div class="d-flex justify-content-center"><a href="register.html"
-                        class="btn btn-light btn-lg px-5 fw-bold border-0 text-primary rounded-pill shadow">Sign Up
-                        Now</a></div>
+
+        <!-- Premium Club CTA -->
+        <!-- <section class="py-7 bg-white text-center position-relative overflow-hidden">
+            <div class="position-absolute top-50 start-50 translate-middle rounded-circle animate-breathe"
+                style="width: 800px; height: 800px; z-index: 0; background: radial-gradient(circle, rgba(var(--bs-primary-rgb), 0.08) 0%, transparent 70%);">
+            </div>
+            <div class="container position-relative" style="z-index: 1;" data-reveal="scale-up">
+                <h2 class="display-4 fw-bold mb-4 text-dark">Join the Inner Circle</h2>
+                <p class="lead mb-5 mx-auto text-muted" style="max-width:650px;">Become a member of the Blossom Boutique
+                    Club and receive exquisite floral inspiration along with 15% off your first luxury arrangement.</p>
+                <div class="d-flex justify-content-center">
+                    <a href="register.html"
+                        class="btn btn-primary btn-lg px-5 py-3 fw-bold border-0 rounded-pill shadow-lg">Elevate My
+                        Gifting</a>
+                </div>
+            </div>
+        </section> -->
+        <!-- Refined Contact Us Section -->
+        <section class="section-padding bg-white position-relative overflow-hidden">
+            <div class="container">
+                <div class="glass-panel p-4 p-lg-5 overflow-hidden position-relative">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-6" data-reveal="fade-right">
+                            <div class="position-relative">
+                                <img src="assets/images/contact-premium.png" alt="Contact Us"
+                                    class="img-fluid rounded-4 shadow-lg modern-card-hover">
+                                <div class="position-absolute bottom-0 start-0 m-3 d-none d-md-block">
+                                    <span class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">Premium
+                                        Quality</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-reveal="fade-left">
+                            <div class="ps-lg-4">
+                                <h2 class="display-5 fw-bold mb-4">Contact Us for <span class="text-primary">Custom
+                                        Orders</span></h2>
+                                <p class="lead text-muted mb-5">Have a specific vision in mind? Our master florists are
+                                    here to bring your custom arrangements to life with the freshest blooms and
+                                    exquisite designs.</p>
+                                <a href="contact.html" class="btn btn-primary btn-lg px-5 shadow-lg">Start a
+                                    Conversation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -503,7 +609,7 @@
             document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
             document.documentElement.setAttribute('lang', isRTL ? 'ar' : 'en');
             localStorage.setItem('isRTL', isRTL);
-            
+
             if (isRTL) {
                 bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css';
             } else {
@@ -562,6 +668,8 @@
             }
         });
     </script>
+    <!-- Custom JS -->
+    <script src="js/animations.js"></script>
 </body>
 
 </html>

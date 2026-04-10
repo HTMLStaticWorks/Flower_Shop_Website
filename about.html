@@ -42,7 +42,7 @@
                 <div class="d-flex align-items-center gap-1 mobile-only">
                     <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleMobile"
                         aria-label="Toggle RTL">
-                        <i class="bi bi-translate fs-4"></i>
+                        <span class="fw-bold small">RTL</span>
                     </button>
                     <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleMobile"
                         aria-label="Toggle Theme">
@@ -87,7 +87,7 @@
                             <div class="d-flex align-items-center gap-1 desktop-only">
                                 <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleDesktop"
                                     aria-label="Toggle RTL" title="Toggle RTL">
-                                    <i class="bi bi-translate fs-5"></i>
+                                    <span class="fw-bold small">RTL</span>
                                 </button>
                                 <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleDesktop"
                                     aria-label="Toggle Theme">
@@ -105,47 +105,44 @@
 
     <main>
         <!-- Hero -->
-        <section class="py-5 py-lg-7 text-center hero-section position-relative border-bottom"
-            style="background-color: var(--bs-secondary); overflow: hidden;">
+        <section class="py-5 py-lg-7 text-center hero-section position-relative border-bottom bg-light"
+            style="overflow: hidden;">
             <!-- Decorative Background Blobs -->
             <div class="position-absolute top-0 start-0 w-100 h-100 z-0" style="pointer-events: none;">
-                <div class="position-absolute rounded-circle bg-white opacity-50"
+                <div class="position-absolute rounded-circle bg-white opacity-50 animate-breathe"
                     style="width: 40vw; height: 40vw; top: -20%; left: -10%; filter: blur(80px);"></div>
-                <div class="position-absolute rounded-circle bg-primary opacity-25"
+                <div class="position-absolute rounded-circle bg-primary opacity-25 animate-breathe delay-2"
                     style="width: 35vw; height: 35vw; bottom: -10%; right: -5%; filter: blur(90px);"></div>
             </div>
 
             <div class="container py-4 position-relative z-1 d-flex flex-column justify-content-center h-100">
-                <div class="mb-3">
+                <div class="mb-3" data-reveal="scale-up">
                     <i class="bi bi-flower1 display-1 text-primary opacity-75"></i>
                 </div>
-                <h1 class="display-3 fw-bold mb-3 text-dark">Our Story</h1>
-                <p class="lead text-dark opacity-100 mx-auto mb-5 fw-medium" style="max-width: 600px;">Bringing nature's
+                <h1 class="display-3 fw-bold mb-3 text-dark animate-fade-in-up">Our Story</h1>
+                <p class="lead text-dark opacity-100 mx-auto mb-5 fw-medium animate-fade-in-up delay-1" style="max-width: 600px;">Bringing nature's
                     beauty to your every day, one handcrafted bouquet at a time.</p>
 
                 <!-- Stats Grid -->
                 <div class="row justify-content-center g-3 g-md-4 mt-2">
-                    <div class="col-6 col-md-3 text-center">
-                        <div class="p-3 border border-white border-opacity-50 rounded-4 bg-white bg-opacity-50 shadow-sm"
-                            style="backdrop-filter: blur(10px);">
+                    <div class="col-6 col-md-3 text-center" data-reveal="fade-up" data-delay="100">
+                        <div class="glass-panel p-4 lift-on-hover">
                             <h2 class="display-6 fw-bold text-primary mb-1">10K+</h2>
-                            <p class="small text-dark fw-bold text-uppercase mb-0" style="letter-spacing: 1px;">Happy
+                            <p class="small text-muted fw-bold text-uppercase mb-0" style="letter-spacing: 1px;">Happy
                                 Customers</p>
                         </div>
                     </div>
-                    <div class="col-6 col-md-3 text-center">
-                        <div class="p-3 border border-white border-opacity-50 rounded-4 bg-white bg-opacity-50 shadow-sm"
-                            style="backdrop-filter: blur(10px);">
+                    <div class="col-6 col-md-3 text-center" data-reveal="fade-up" data-delay="200">
+                        <div class="glass-panel p-4 lift-on-hover">
                             <h2 class="display-6 fw-bold text-primary mb-1">50+</h2>
-                            <p class="small text-dark fw-bold text-uppercase mb-0" style="letter-spacing: 1px;">Floral
+                            <p class="small text-muted fw-bold text-uppercase mb-0" style="letter-spacing: 1px;">Floral
                                 Varieties</p>
                         </div>
                     </div>
-                    <div class="col-12 col-md-3 text-center">
-                        <div class="p-3 border border-white border-opacity-50 rounded-4 bg-white bg-opacity-50 shadow-sm"
-                            style="backdrop-filter: blur(10px);">
+                    <div class="col-12 col-md-3 text-center" data-reveal="fade-up" data-delay="300">
+                        <div class="glass-panel p-4 lift-on-hover">
                             <h2 class="display-6 fw-bold text-primary mb-1">100%</h2>
-                            <p class="small text-dark fw-bold text-uppercase mb-0" style="letter-spacing: 1px;">Locally
+                            <p class="small text-muted fw-bold text-uppercase mb-0" style="letter-spacing: 1px;">Locally
                                 Sourced</p>
                         </div>
                     </div>
@@ -154,7 +151,7 @@
                 <!-- Scroll Prompt -->
                 <div class="mt-5 pt-4">
                     <a href="#story-content"
-                        class="text-dark text-decoration-none dropdown-toggle opacity-75 d-inline-block transition"
+                        class="text-dark text-decoration-none dropdown-toggle opacity-75 d-inline-block transition animate-float"
                         style="border: none !important;">
                         <span class="d-block small text-uppercase mb-2 fw-bold" style="letter-spacing: 2px;">Scroll to
                             Explore</span>
@@ -166,7 +163,7 @@
         <!-- Story Section -->
         <section id="story-content" class="section-padding bg-white">
             <div class="container">
-                <div class="row align-items-center gy-5">
+                <div class="row align-items-center gy-5" data-reveal="fade-up">
                     <div class="col-lg-6 pe-lg-5 text-center">
                         <img src="assets/images/products/flower-1.jpg" alt="Florist at work"
                             class="img-fluid rounded-4 shadow-lg w-100">
@@ -189,37 +186,37 @@
         <!-- Features Section -->
         <section class="section-padding bg-light">
             <div class="container">
-                <div class="text-center mb-5">
+                <div class="text-center mb-5" data-reveal="fade-up">
                     <h2 class="display-5 fw-bold mb-3">Why Choose Us</h2>
                     <p class="lead text-muted mx-auto" style="max-width: 600px;">We take pride in our service and
                         quality.</p>
                 </div>
 
                 <div class="row g-4 h-100">
-                    <div class="col-md-4 text-center">
-                        <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="col-md-4 text-center" data-reveal="fade-up" data-delay="100">
+                        <div class="premium-card h-100 p-4 glow-on-hover">
                             <div class="card-body">
-                                <i class="bi bi-flower1 display-4 text-primary mb-3"></i>
+                                <i class="bi bi-flower1 display-4 text-primary mb-4 d-block animate-float"></i>
                                 <h3 class="h4 fw-bold mb-3">Farm Fresh</h3>
                                 <p class="text-muted mb-0">Sourced directly from local sustainable farms every morning.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center">
-                        <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="col-md-4 text-center" data-reveal="fade-up" data-delay="200">
+                        <div class="premium-card h-100 p-4 glow-on-hover">
                             <div class="card-body">
-                                <i class="bi bi-truck display-4 text-primary mb-3"></i>
+                                <i class="bi bi-truck display-4 text-primary mb-4 d-block animate-float delay-1"></i>
                                 <h3 class="h4 fw-bold mb-3">Same-Day Delivery</h3>
                                 <p class="text-muted mb-0">Fast and reliable delivery within the city when you order
                                     before 4 PM.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center">
-                        <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="col-md-4 text-center" data-reveal="fade-up" data-delay="300">
+                        <div class="premium-card h-100 p-4 glow-on-hover">
                             <div class="card-body">
-                                <i class="bi bi-palette display-4 text-primary mb-3"></i>
+                                <i class="bi bi-palette display-4 text-primary mb-4 d-block animate-float delay-2"></i>
                                 <h3 class="h4 fw-bold mb-3">Artisan Designed</h3>
                                 <p class="text-muted mb-0">Every bouquet is uniquely crafted by our experienced floral
                                     artists.</p>
@@ -420,6 +417,8 @@
             }
         });
     </script>
+    <!-- Custom JS -->
+    <script src="js/animations.js"></script>
 </body>
 
 </html>

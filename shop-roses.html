@@ -15,7 +15,8 @@
         rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
@@ -44,7 +45,7 @@
                 <div class="d-flex align-items-center gap-1 mobile-only">
                     <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleMobile"
                         aria-label="Toggle RTL">
-                        <i class="bi bi-translate fs-4"></i>
+                        <span class="fw-bold small">RTL</span>
                     </button>
                     <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleMobile"
                         aria-label="Toggle Theme">
@@ -91,7 +92,7 @@
                             <div class="d-flex align-items-center gap-1 desktop-only">
                                 <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleDesktop"
                                     aria-label="Toggle RTL" title="Toggle RTL">
-                                    <i class="bi bi-translate fs-5"></i>
+                                    <span class="fw-bold small">RTL</span>
                                 </button>
                                 <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleDesktop"
                                     aria-label="Toggle Theme">
@@ -108,34 +109,50 @@
     </header>
 
     <main class="bg-light">
-        <section class="py-5" style="background-color: var(--bg-white);">
-            <div class="container text-center">
-                <h1 class="display-4 fw-bold mb-3">Luxury Roses</h1>
+        <section class="py-5 pt-7" style="background-color: var(--bg-white);">
+            <div class="container text-center" data-reveal="fade-up">
+                <h1 class="display-3 fw-bold mb-3">Luxury Roses</h1>
                 <p class="lead text-muted mx-auto" style="max-width: 600px;">Handpicked, premium long-stemmed roses for
-                    every romantic occasion.</p>
+                    every romantic occasion, arranged with expert care.</p>
             </div>
         </section>
-        <section class="py-3 bg-white border-bottom shadow-sm">
-            <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
-                <div class="fw-bold text-muted">Showing 10 beautiful arrangements</div>
-                <div class="d-flex gap-2">
-                    <select class="form-select form-select-sm w-auto">
-                        <option>Sort by Popularity</option>
-                        <option>Price: Low to High</option>
-                    </select>
+        <section class="py-3 sticky-top shadow-sm z-3"
+            style="top: var(--nav-height); background: rgba(255,255,255,0.8); backdrop-filter: blur(10px);">
+            <div class="container">
+                <div class="filter-bar d-flex flex-wrap justify-content-between align-items-center gap-3">
+                    <div class="fw-bold text-muted small text-uppercase" style="letter-spacing: 1px;">Showing 10
+                        beautiful arrangements</div>
+                    <div class="d-flex gap-3 align-items-center">
+                        <span class="small text-muted fw-bold d-none d-md-block">SORT BY:</span>
+                        <select
+                            class="form-select form-select-sm border-0 bg-light rounded-pill px-3 shadow-none w-auto">
+                            <option>Popularity</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="section-padding bg-light">
-            <div class="container" style="max-width: 1000px;">
-                <div class="row row-cols-1 row-cols-sm-2 g-5">
+            <div class="container-fluid px-lg-5" style="max-width: 1600px;">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 g-lg-5">
 
-                    <div class="col">
-                        <div class="card border-0 shadow-sm h-100 product-card">
-                            <div class="position-absolute top-0 start-0 m-3"><span
-                                    class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">Popular</span></div>
-                            <img src="assets/images/products/Crimson Stargazer.jfif"
-                                class="card-img-top object-fit-cover" style="aspect-ratio: 4/3;" alt="Classic Red">
+                    <div class="col" data-reveal="fade-up" data-delay="100">
+                        <div class="premium-card h-100">
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to Wishlist"><i
+                                        class="bi bi-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick View"><i class="bi bi-eye"></i></button>
+                            </div>
+                            <div class="position-absolute top-0 start-0 m-3 z-1">
+                                <span class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">Popular</span>
+                            </div>
+                            <div class="overflow-hidden">
+                                <img src="assets/images/products/Crimson Stargazer.jfif"
+                                    class="card-img-top object-fit-cover transition" style="aspect-ratio: 4/3;"
+                                    alt="Classic Red">
+                            </div>
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
                                     <h3 class="h5 fw-bold mb-0 text-dark">Classic Red</h3>
@@ -143,8 +160,7 @@
                                 </div>
                                 <p class="text-muted small mb-4">Premium Collection</p>
                                 <a href="product-detail.html?title=Classic%20Red&price=%2460&img=assets/images/products/Crimson%20Stargazer.jfif"
-                                    class="btn btn-outline-primary mt-auto w-100 py-2">View
-                                    Details</a>
+                                    class="btn btn-outline-primary glow-on-hover mt-auto w-100 py-2">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -277,7 +293,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <!-- <div class="col">
                         <div class="card border-0 shadow-sm h-100 product-card">
 
                             <img src="assets/images/products/Golden Sunset.webp" class="card-img-top object-fit-cover"
@@ -311,7 +327,7 @@
                                     Details</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -439,11 +455,11 @@
             document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
             document.documentElement.setAttribute('lang', isRTL ? 'ar' : 'en');
             localStorage.setItem('isRTL', isRTL);
-            
+
             if (isRTL) {
-                if(bsCss) bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css';
+                if (bsCss) bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css';
             } else {
-                if(bsCss) bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
+                if (bsCss) bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
             }
         }
 
@@ -498,6 +514,8 @@
             }
         });
     </script>
+    <!-- Custom JS -->
+    <script src="js/animations.js"></script>
 </body>
 
 </html>

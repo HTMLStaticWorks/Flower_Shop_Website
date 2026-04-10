@@ -44,7 +44,7 @@
                 <div class="d-flex align-items-center gap-1 mobile-only">
                     <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleMobile"
                         aria-label="Toggle RTL">
-                        <i class="bi bi-translate fs-4"></i>
+                        <span class="fw-bold small">RTL</span>
                     </button>
                     <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleMobile"
                         aria-label="Toggle Theme">
@@ -91,7 +91,7 @@
                             <div class="d-flex align-items-center gap-1 desktop-only">
                                 <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleDesktop"
                                     aria-label="Toggle RTL" title="Toggle RTL">
-                                    <i class="bi bi-translate fs-5"></i>
+                                    <span class="fw-bold small">RTL</span>
                                 </button>
                                 <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleDesktop"
                                     aria-label="Toggle Theme">
@@ -108,41 +108,48 @@
     </header>
 
     <main class="py-5 bg-white">
-        <div class="container">
+        <div class="container-fluid px-lg-5" style="max-width: 1400px;">
 
 
             <div class="row gy-5 mt-2">
-                <div class="col-lg-6 text-center">
-                    <img src="https://images.unsplash.com/photo-1523694576722-cbaec25026df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        class="img-fluid rounded-4 shadow-sm w-100" alt="Product Image">
+                <div class="col-lg-6" data-reveal="fade-right">
+                    <div class="position-relative">
+                        <div class="glass-panel p-2 shadow-lg" style="border-radius: 30px; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1523694576722-cbaec25026df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                class="img-fluid rounded-4 w-100 transition hover-scale-sm" alt="Product Image" id="mainProductImage">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-lg-6 text-center">
                     <div class="ps-lg-4">
                         <span
                             class="badge bg-primary bg-opacity-10 text-primary mb-2 px-3 py-2 rounded-pill">Bestseller</span>
-                        <h1 class="display-5 fw-bold mb-2">Pastel Dreams</h1>
-                        <p class="fs-3 fw-bold text-primary mb-4">$85.00</p>
-                        <p class="text-muted mb-4">A gentle, soothing arrangement of premium pastel roses, soft pink
-                            lisianthus, and fresh eucalyptus. Perfect for celebrating a birthday or welcoming a new
-                            baby.</p>
+                        <h1 class="display-4 fw-bold mb-2 text-dark">Pastel Dreams</h1>
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <p class="fs-2 fw-bold text-primary mb-0">$85.00</p>
+                        </div>
+                        <p class="text-muted mb-5 leading-relaxed">A gentle, soothing arrangement of premium pastel roses, soft pink
+                            lisianthus, and fresh eucalyptus. Hand-crafted by our master florists to ensure every petal is perfect.</p>
 
-                        <div class="mb-4">
-                            <label class="form-label fw-bold">Size Options</label>
+                        <div class="glass-panel p-4 mb-5" style="border-radius: 20px;">
+                            <label class="form-label fw-bold small text-uppercase mb-3" style="letter-spacing: 1px;">Select Luxury Tier</label>
                             <div class="d-flex gap-2">
                                 <input type="radio" class="btn-check" name="size" id="size1" autocomplete="off" checked>
-                                <label class="btn btn-outline-primary" for="size1">Standard</label>
+                                <label class="btn btn-outline-primary px-4 py-2 rounded-pill shadow-sm" for="size1">Standard</label>
 
                                 <input type="radio" class="btn-check" name="size" id="size2" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="size2">Deluxe (+$20)</label>
+                                <label class="btn btn-outline-primary px-4 py-2 rounded-pill shadow-sm" for="size2">Deluxe (+ $20)</label>
 
                                 <input type="radio" class="btn-check" name="size" id="size3" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="size3">Premium (+$40)</label>
+                                <label class="btn btn-outline-primary px-4 py-2 rounded-pill shadow-sm" for="size3">Premium (+ $40)</label>
                             </div>
                         </div>
 
-                        <a href="checkout.html" class="btn btn-primary btn-lg w-100 mb-3"><i
-                                class="bi bi-cart-plus me-2"></i> Customize & Add to Cart</a>
+                        <a href="checkout.html" class="btn btn-primary btn-lg w-100 py-3 rounded-pill shadow-lg glow-on-hover d-flex align-items-center justify-content-center">
+                            <i class="bi bi-bag-heart me-2 fs-5"></i> 
+                            <span class="fw-bold">Experience the Bloom</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -290,6 +297,8 @@
             }
         });
     </script>
+    <!-- Custom JS -->
+    <script src="js/animations.js"></script>
 </body>
 
 </html>

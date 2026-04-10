@@ -25,22 +25,23 @@
 
 
 
+    <div class="position-fixed top-0 end-0 m-3 m-md-4 z-3 d-flex align-items-center gap-2 bg-body bg-opacity-75 backdrop-blur border rounded-pill px-3 py-2 shadow-sm">
+        <button class="btn btn-link text-secondary p-0 fs-4 shadow-none hover-scale"
+            aria-label="Toggle RTL" id="rtlToggleDesktop" title="Toggle RTL">
+            <span class="fw-bold small">RTL</span>
+        </button>
+        <div class="vr mx-1 opacity-25"></div>
+        <button class="btn btn-link text-secondary p-0 fs-4 shadow-none theme-toggle-btn hover-scale"
+            aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+        </button>
+    </div>
+
     <main class="min-vh-100 d-flex align-items-center py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-9 col-lg-7 col-xl-6 text-center">
-                    <div class="card border-0 shadow p-4 p-md-5 position-relative">
-                        <!-- Theme and RTL Toggle Buttons -->
-                        <div class="position-absolute top-0 end-0 m-3 d-flex align-items-center gap-1">
-                            <button class="btn btn-link text-secondary p-0 fs-4 shadow-none"
-                                aria-label="Toggle RTL" id="rtlToggleDesktop" title="Toggle RTL">
-                                <i class="bi bi-translate"></i>
-                            </button>
-                            <button class="btn btn-link text-secondary p-0 fs-4 shadow-none theme-toggle-btn"
-                                aria-label="Toggle Theme">
-                                <i class="bi bi-moon-stars-fill"></i>
-                            </button>
-                        </div>
+                    <div class="card border-0 shadow-lg p-4 p-md-5 position-relative">
                         <div class="text-center mb-4">
                             <a href="index.html" class="d-inline-block">
                                 <img src="assets/images/logo.svg" alt="Blossom Boutique Logo"
@@ -92,20 +93,24 @@
                                 <hr class="flex-grow-1 bg-secondary opacity-25">
                             </div>
 
-                            <div class="d-flex justify-content-center gap-3 mb-4">
+                             <div class="d-flex justify-content-center gap-3 mb-4">
                                 <button type="button"
-                                    class="btn btn-light border rounded-circle shadow-sm d-flex align-items-center justify-content-center"
-                                    style="width: 50px; height: 50px; transition: transform 0.2s ease;"
-                                    onmouseover="this.style.transform='translateY(-2px)'"
-                                    onmouseout="this.style.transform='none'" title="Google">
+                                    class="btn btn-light border rounded-circle shadow-sm d-flex align-items-center justify-content-center hover-scale"
+                                    style="width: 50px; height: 50px;"
+                                    title="Google">
                                     <i class="bi bi-google text-danger fs-4"></i>
                                 </button>
                                 <button type="button"
-                                    class="btn btn-light border rounded-circle shadow-sm d-flex align-items-center justify-content-center"
-                                    style="width: 50px; height: 50px; transition: transform 0.2s ease;"
-                                    onmouseover="this.style.transform='translateY(-2px)'"
-                                    onmouseout="this.style.transform='none'" title="Facebook">
+                                    class="btn btn-light border rounded-circle shadow-sm d-flex align-items-center justify-content-center hover-scale"
+                                    style="width: 50px; height: 50px;"
+                                    title="Facebook">
                                     <i class="bi bi-facebook text-primary fs-4"></i>
+                                </button>
+                                <button type="button"
+                                    class="btn btn-light border rounded-circle shadow-sm d-flex align-items-center justify-content-center hover-scale"
+                                    style="width: 50px; height: 50px;"
+                                    title="Apple">
+                                    <i class="bi bi-apple text-dark fs-4"></i>
                                 </button>
                             </div>
 

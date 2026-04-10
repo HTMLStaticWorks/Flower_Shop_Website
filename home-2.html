@@ -44,7 +44,7 @@
                 <div class="d-flex align-items-center gap-1 mobile-only">
                     <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleMobile"
                         aria-label="Toggle RTL">
-                        <i class="bi bi-translate fs-4"></i>
+                        <span class="fw-bold small">RTL</span>
                     </button>
                     <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleMobile"
                         aria-label="Toggle Theme">
@@ -91,7 +91,7 @@
                             <div class="d-flex align-items-center gap-1 desktop-only">
                                 <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleDesktop"
                                     aria-label="Toggle RTL" title="Toggle RTL">
-                                    <i class="bi bi-translate fs-5"></i>
+                                    <span class="fw-bold small">RTL</span>
                                 </button>
                                 <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleDesktop"
                                     aria-label="Toggle Theme">
@@ -112,7 +112,7 @@
         <section class="position-relative d-flex align-items-center justify-content-center"
             style="min-height: 85vh; background: url('assets/images/hero.jpg') center/cover no-repeat;">
             <div class="position-absolute w-100 h-100 top-0 start-0 bg-dark opacity-50"></div>
-            <div class="container position-relative text-center text-white animate-fade-in-up" style="z-index: 2;">
+            <div class="container position-relative text-center text-white" style="z-index: 2;" data-reveal="fade-up">
                 <span class="badge bg-primary px-3 py-2 rounded-pill shadow-sm mb-3 text-uppercase tracking-wide">Modern
                     Collection</span>
                 <h1 class="display-1 fw-bold mb-4 text-white">The Art of Gifting</h1>
@@ -126,8 +126,8 @@
 
         <!-- 2. Minimalist Categories (Circles) -->
         <section class="py-5 bg-white border-bottom position-relative" style="margin-top: -60px; z-index: 10;">
-            <div class="container glass-panel shadow-sm px-4 py-5 mb-3" style="border-radius: 20px;">
-                <div class="text-center mb-5 animate-fade-in-up">
+            <div class="container glass-panel shadow-sm px-4 py-5 mb-3" style="border-radius: 20px;" data-reveal="fade-up">
+                <div class="text-center mb-5">
                     <h2 class="h3 fw-bold text-dark mb-0">Browse by Collection</h2>
                 </div>
                 <div class="row g-4 justify-content-center text-center">
@@ -169,12 +169,12 @@
         <section class="py-0 bg-light overflow-hidden mt-5">
             <div class="container">
                 <div class="row g-0 align-items-center bg-white rounded-4 shadow-sm overflow-hidden">
-                    <div class="col-lg-6 animate-fade-in-right text-center">
+                    <div class="col-lg-6 text-center" data-reveal="fade-right">
                         <img src="assets/images/products/Velvet Romance.jfif" alt="Velvet Romance" class="img-fluid w-100"
                             style="object-fit: cover; min-height: 450px;">
                     </div>
                     <div
-                        class="col-lg-6 px-5 py-5 py-lg-0 text-center animate-fade-in-up delay-2 d-flex flex-column justify-content-center">
+                        class="col-lg-6 px-5 py-5 py-lg-0 text-center d-flex flex-column justify-content-center" data-reveal="fade-left">
                         <div class="mx-auto px-lg-4" style="max-width: 450px;">
                             <span
                                 class="text-primary fw-bold text-uppercase tracking-wide small mb-2 d-block">Spotlight</span>
@@ -194,7 +194,7 @@
         <!-- 4. Trending Now (3-col layout) -->
         <section class="py-5 py-lg-7 bg-light mt-4">
             <div class="container">
-                <div class="text-center mb-5 animate-fade-in-up">
+                <div class="text-center mb-5" data-reveal="fade-up">
                     <h2 class="display-6 fw-bold text-dark mb-3">Trending Now</h2>
                     <a href="shop.html" class="text-primary text-decoration-none fw-bold btn-link">View All Products <i
                             class="bi bi-arrow-right"></i></a>
@@ -317,21 +317,17 @@
         </section>
 
         <!-- 7. Premium Newsletter -->
-        <section class="py-5 py-lg-6 bg-primary text-white text-center position-relative overflow-hidden">
-            <!-- Structural background overlay keeping exactly within the primary color palette natively -->
-            <div class="position-absolute w-100 h-100 top-0 start-0"
-                style="background: radial-gradient(circle at top right, rgba(255,255,255,0.15) 0%, transparent 60%);">
-            </div>
+        <section class="py-5 py-lg-6 bg-light text-center position-relative overflow-hidden border-top">
             <div class="container py-4 position-relative animate-fade-in-up" style="z-index: 2;">
-                <h2 class="display-5 fw-bold mb-3 text-white">Join the Inner Circle</h2>
-                <p class="lead mb-5 mx-auto text-white opacity-75" style="max-width: 600px;">Subscribe to receive
+                <h2 class="display-5 fw-bold mb-3 text-dark">Join the Inner Circle</h2>
+                <p class="lead mb-5 mx-auto text-muted opacity-75" style="max-width: 600px;">Subscribe to receive
                     exclusive access to limited-edition seasonal bouquets and 15% off your first luxury order.</p>
                 <form class="d-flex mx-auto shadow-lg" style="max-width: 500px;">
                     <input type="email"
                         class="form-control form-control-lg rounded-start-pill border-0 shadow-none px-4"
                         placeholder="Enter your email address" required>
                     <button type="submit"
-                        class="btn btn-dark btn-lg rounded-end-pill px-5 fw-bold text-uppercase">Join</button>
+                        class="btn btn-primary btn-lg rounded-end-pill px-5 fw-bold text-uppercase">Join</button>
                 </form>
             </div>
         </section>
@@ -508,6 +504,8 @@
             }
         });
     </script>
+    <!-- Custom JS -->
+    <script src="js/animations.js"></script>
 </body>
 
 </html>
