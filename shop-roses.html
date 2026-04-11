@@ -25,6 +25,56 @@
 </head>
 
 <body class="bg-light">
+    <!-- Offcanvas for Mobile -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header border-bottom">
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column align-items-lg-center">
+            <ul class="navbar-nav mx-lg-auto mb-4 mb-lg-0 align-items-lg-center gap-lg-3 fs-5 fs-lg-6">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="homeDropdown">
+                        <li><a class="dropdown-item" href="index.html">Classic Home</a></li>
+                        <li><a class="dropdown-item" href="home-2.html">Modern Home</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
+                        <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
+                        <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
+                        <li><a class="dropdown-item" href="occasions.html">Occasions</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Actions -->
+            <div
+                class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-auto mt-lg-0 ps-lg-3 border-lg-start">
+                <div class="d-flex align-items-center gap-1 desktop-only">
+                    <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleDesktop"
+                        aria-label="Toggle RTL" title="Toggle RTL">
+                        <span class="fw-bold small">RTL</span>
+                    </button>
+                    <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleDesktop"
+                        aria-label="Toggle Theme">
+                        <i class="bi bi-moon-stars-fill fs-5"></i>
+                    </button>
+                </div>
+                <a href="login.html" class="btn btn-outline-primary w-100 w-lg-auto">Login</a>
+                <a href="register.html" class="btn btn-primary w-100 w-lg-auto">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
     <header class="sticky-top">
         <nav class="navbar navbar-expand-custom px-3 px-lg-4">
             <div class="container-fluid align-items-center">
@@ -53,57 +103,6 @@
                     </button>
                 </div>
 
-                <!-- Offcanvas for Mobile -->
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header border-bottom">
-                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-
-                    <div class="offcanvas-body d-flex flex-column align-items-lg-center">
-                        <ul class="navbar-nav mx-lg-auto mb-4 mb-lg-0 align-items-lg-center gap-lg-3 fs-5 fs-lg-6">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Home</a>
-                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="homeDropdown">
-                                    <li><a class="dropdown-item" href="index.html">Classic Home</a></li>
-                                    <li><a class="dropdown-item" href="home-2.html">Modern Home</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
-                                    <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
-                                    <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
-                                    <li><a class="dropdown-item" href="occasions.html">Occasions</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                        <!-- Actions -->
-                        <div
-                            class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-auto mt-lg-0 ps-lg-3 border-lg-start">
-                            <div class="d-flex align-items-center gap-1 desktop-only">
-                                <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleDesktop"
-                                    aria-label="Toggle RTL" title="Toggle RTL">
-                                    <span class="fw-bold small">RTL</span>
-                                </button>
-                                <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleDesktop"
-                                    aria-label="Toggle Theme">
-                                    <i class="bi bi-moon-stars-fill fs-5"></i>
-                                </button>
-                            </div>
-                            <a href="login.html" class="btn btn-outline-primary w-100 w-lg-auto">Login</a>
-                            <a href="register.html" class="btn btn-primary w-100 w-lg-auto">Sign Up</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </nav>
     </header>
@@ -136,7 +135,7 @@
         </section>
         <section class="section-padding bg-light">
             <div class="container-fluid px-lg-5" style="max-width: 1600px;">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 g-lg-5">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 g-lg-5">
 
                     <div class="col" data-reveal="fade-up" data-delay="100">
                         <div class="premium-card h-100">

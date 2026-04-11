@@ -15,7 +15,8 @@
         rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
@@ -24,6 +25,56 @@
 </head>
 
 <body class="bg-light">
+    <!-- Offcanvas for Mobile -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header border-bottom">
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column align-items-lg-center">
+            <ul class="navbar-nav mx-lg-auto mb-4 mb-lg-0 align-items-lg-center gap-lg-3 fs-5 fs-lg-6">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="homeDropdown">
+                        <li><a class="dropdown-item" href="index.html">Classic Home</a></li>
+                        <li><a class="dropdown-item" href="home-2.html">Modern Home</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
+                        <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
+                        <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
+                        <li><a class="dropdown-item" href="occasions.html">Occasions</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Actions -->
+            <div
+                class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-auto mt-lg-0 ps-lg-3 border-lg-start">
+                <div class="d-flex align-items-center gap-1 desktop-only">
+                    <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleDesktop"
+                        aria-label="Toggle RTL" title="Toggle RTL">
+                        <span class="fw-bold small">RTL</span>
+                    </button>
+                    <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleDesktop"
+                        aria-label="Toggle Theme">
+                        <i class="bi bi-moon-stars-fill fs-5"></i>
+                    </button>
+                </div>
+                <a href="login.html" class="btn btn-outline-primary w-100 w-lg-auto">Login</a>
+                <a href="register.html" class="btn btn-primary w-100 w-lg-auto">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
     <header class="sticky-top">
         <nav class="navbar navbar-expand-custom px-3 px-lg-4">
             <div class="container-fluid align-items-center">
@@ -52,57 +103,6 @@
                     </button>
                 </div>
 
-                <!-- Offcanvas for Mobile -->
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header border-bottom">
-                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-
-                    <div class="offcanvas-body d-flex flex-column align-items-lg-center">
-                        <ul class="navbar-nav mx-lg-auto mb-4 mb-lg-0 align-items-lg-center gap-lg-3 fs-5 fs-lg-6">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Home</a>
-                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="homeDropdown">
-                                    <li><a class="dropdown-item" href="index.html">Classic Home</a></li>
-                                    <li><a class="dropdown-item" href="home-2.html">Modern Home</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
-                                    <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
-                                    <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
-                                    <li><a class="dropdown-item" href="occasions.html">Occasions</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                        <!-- Actions -->
-                        <div
-                            class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-auto mt-lg-0 ps-lg-3 border-lg-start">
-                            <div class="d-flex align-items-center gap-1 desktop-only">
-                                <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleDesktop"
-                                    aria-label="Toggle RTL" title="Toggle RTL">
-                                    <span class="fw-bold small">RTL</span>
-                                </button>
-                                <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleDesktop"
-                                    aria-label="Toggle Theme">
-                                    <i class="bi bi-moon-stars-fill fs-5"></i>
-                                </button>
-                            </div>
-                            <a href="login.html" class="btn btn-outline-primary w-100 w-lg-auto">Login</a>
-                            <a href="register.html" class="btn btn-primary w-100 w-lg-auto">Sign Up</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </nav>
     </header>
@@ -115,13 +115,16 @@
                     floral arrangements, handcrafted with love.</p>
             </div>
         </section>
-        <section class="py-3 sticky-top shadow-sm z-3" style="top: var(--nav-height); background: rgba(255,255,255,0.8); backdrop-filter: blur(10px);">
+        <section class="py-3 sticky-top shadow-sm z-3"
+            style="top: var(--nav-height); background: rgba(255,255,255,0.8); backdrop-filter: blur(10px);">
             <div class="container">
                 <div class="filter-bar d-flex flex-wrap justify-content-between align-items-center gap-3">
-                    <div class="fw-bold text-muted small text-uppercase" style="letter-spacing: 1px;">Showing 10 beautiful arrangements</div>
+                    <div class="fw-bold text-muted small text-uppercase" style="letter-spacing: 1px;">Showing 10
+                        beautiful arrangements</div>
                     <div class="d-flex gap-3 align-items-center">
                         <span class="small text-muted fw-bold d-none d-md-block">SORT BY:</span>
-                        <select class="form-select form-select-sm border-0 bg-light rounded-pill px-3 shadow-none w-auto">
+                        <select
+                            class="form-select form-select-sm border-0 bg-light rounded-pill px-3 shadow-none w-auto">
                             <option>Popularity</option>
                             <option>Price: Low to High</option>
                             <option>Price: High to Low</option>
@@ -133,12 +136,13 @@
         </section>
         <section class="section-padding bg-light">
             <div class="container-fluid px-lg-5" style="max-width: 1600px;">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 g-lg-5">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 g-lg-5">
 
                     <div class="col" data-reveal="fade-up" data-delay="100">
                         <div class="premium-card h-100">
                             <div class="product-actions">
-                                <button class="action-btn" aria-label="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="action-btn" aria-label="Add to Wishlist"><i
+                                        class="bi bi-heart"></i></button>
                                 <button class="action-btn" aria-label="Quick View"><i class="bi bi-eye"></i></button>
                             </div>
                             <div class="position-absolute top-0 start-0 m-3 z-1">
@@ -146,7 +150,8 @@
                             </div>
                             <div class="overflow-hidden">
                                 <img src="assets/images/products/Crimson Stargazer.jfif"
-                                    class="card-img-top object-fit-cover transition" style="aspect-ratio: 4/3;" alt="Classic Red">
+                                    class="card-img-top object-fit-cover transition" style="aspect-ratio: 4/3;"
+                                    alt="Classic Red">
                             </div>
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
@@ -163,12 +168,14 @@
                     <div class="col" data-reveal="fade-up" data-delay="200">
                         <div class="premium-card h-100">
                             <div class="product-actions">
-                                <button class="action-btn" aria-label="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="action-btn" aria-label="Add to Wishlist"><i
+                                        class="bi bi-heart"></i></button>
                                 <button class="action-btn" aria-label="Quick View"><i class="bi bi-eye"></i></button>
                             </div>
                             <div class="overflow-hidden">
-                                <img src="assets/images/products/Pastel Dreams.jfif" class="card-img-top object-fit-cover transition"
-                                    style="aspect-ratio: 4/3;" alt="Pastel Dreams">
+                                <img src="assets/images/products/Pastel Dreams.jfif"
+                                    class="card-img-top object-fit-cover transition" style="aspect-ratio: 4/3;"
+                                    alt="Pastel Dreams">
                             </div>
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
@@ -185,12 +192,14 @@
                     <div class="col" data-reveal="fade-up" data-delay="300">
                         <div class="premium-card h-100">
                             <div class="product-actions">
-                                <button class="action-btn" aria-label="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="action-btn" aria-label="Add to Wishlist"><i
+                                        class="bi bi-heart"></i></button>
                                 <button class="action-btn" aria-label="Quick View"><i class="bi bi-eye"></i></button>
                             </div>
                             <div class="overflow-hidden">
-                                <img src="assets/images/products/Sunshine Yellow.jfif" class="card-img-top object-fit-cover transition"
-                                    style="aspect-ratio: 4/3;" alt="Sunshine Yellow">
+                                <img src="assets/images/products/Sunshine Yellow.jfif"
+                                    class="card-img-top object-fit-cover transition" style="aspect-ratio: 4/3;"
+                                    alt="Sunshine Yellow">
                             </div>
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
@@ -207,12 +216,14 @@
                     <div class="col" data-reveal="fade-up" data-delay="400">
                         <div class="premium-card h-100">
                             <div class="product-actions">
-                                <button class="action-btn" aria-label="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="action-btn" aria-label="Add to Wishlist"><i
+                                        class="bi bi-heart"></i></button>
                                 <button class="action-btn" aria-label="Quick View"><i class="bi bi-eye"></i></button>
                             </div>
                             <div class="overflow-hidden">
-                                <img src="assets/images/products/Ethereal White.jfif" class="card-img-top object-fit-cover transition"
-                                    style="aspect-ratio: 4/3;" alt="Ethereal White">
+                                <img src="assets/images/products/Ethereal White.jfif"
+                                    class="card-img-top object-fit-cover transition" style="aspect-ratio: 4/3;"
+                                    alt="Ethereal White">
                             </div>
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
@@ -229,15 +240,17 @@
                     <div class="col" data-reveal="fade-up" data-delay="100">
                         <div class="premium-card h-100">
                             <div class="product-actions">
-                                <button class="action-btn" aria-label="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="action-btn" aria-label="Add to Wishlist"><i
+                                        class="bi bi-heart"></i></button>
                                 <button class="action-btn" aria-label="Quick View"><i class="bi bi-eye"></i></button>
                             </div>
                             <div class="position-absolute top-0 start-0 m-3 z-1">
                                 <span class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">Popular</span>
                             </div>
                             <div class="overflow-hidden">
-                                <img src="assets/images/products/Vibrant Spring.jfif" class="card-img-top object-fit-cover transition"
-                                    style="aspect-ratio: 4/3;" alt="Vibrant Spring">
+                                <img src="assets/images/products/Vibrant Spring.jfif"
+                                    class="card-img-top object-fit-cover transition" style="aspect-ratio: 4/3;"
+                                    alt="Vibrant Spring">
                             </div>
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
@@ -254,7 +267,8 @@
                     <div class="col" data-reveal="fade-up" data-delay="200">
                         <div class="premium-card h-100">
                             <div class="product-actions">
-                                <button class="action-btn" aria-label="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="action-btn" aria-label="Add to Wishlist"><i
+                                        class="bi bi-heart"></i></button>
                                 <button class="action-btn" aria-label="Quick View"><i class="bi bi-eye"></i></button>
                             </div>
                             <div class="overflow-hidden">
@@ -277,12 +291,14 @@
                     <div class="col" data-reveal="fade-up" data-delay="300">
                         <div class="premium-card h-100">
                             <div class="product-actions">
-                                <button class="action-btn" aria-label="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="action-btn" aria-label="Add to Wishlist"><i
+                                        class="bi bi-heart"></i></button>
                                 <button class="action-btn" aria-label="Quick View"><i class="bi bi-eye"></i></button>
                             </div>
                             <div class="overflow-hidden">
-                                <img src="assets/images/products/Velvet Romance.jfif" class="card-img-top object-fit-cover transition"
-                                    style="aspect-ratio: 4/3;" alt="Velvet Romance">
+                                <img src="assets/images/products/Velvet Romance.jfif"
+                                    class="card-img-top object-fit-cover transition" style="aspect-ratio: 4/3;"
+                                    alt="Velvet Romance">
                             </div>
                             <div class="card-body p-4 d-flex flex-column">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
@@ -314,7 +330,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <!-- <div class="col">
                         <div class="card border-0 shadow-sm h-100 product-card">
 
                             <img src="assets/images/products/Golden Sunset.webp" class="card-img-top object-fit-cover"
@@ -330,9 +346,9 @@
                                     Details</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col">
+                    <!-- <div class="col">
                         <div class="card border-0 shadow-sm h-100 product-card">
 
                             <img src="assets/images/products/Midnight Lily.jpg" class="card-img-top object-fit-cover"
@@ -348,7 +364,7 @@
                                     Details</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -476,11 +492,11 @@
             document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
             document.documentElement.setAttribute('lang', isRTL ? 'ar' : 'en');
             localStorage.setItem('isRTL', isRTL);
-            
+
             if (isRTL) {
-                if(bsCss) bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css';
+                if (bsCss) bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css';
             } else {
-                if(bsCss) bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
+                if (bsCss) bsCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
             }
         }
 

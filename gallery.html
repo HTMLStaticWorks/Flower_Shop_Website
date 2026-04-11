@@ -24,7 +24,59 @@
 </head>
 
 <body class="bg-light">
-    <header class="sticky-top">
+    
+    
+    <!-- Offcanvas for Mobile -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header border-bottom">
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column align-items-lg-center">
+            <ul class="navbar-nav mx-lg-auto mb-4 mb-lg-0 align-items-lg-center gap-lg-3 fs-5 fs-lg-6">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="homeDropdown">
+                        <li><a class="dropdown-item" href="index.html">Classic Home</a></li>
+                        <li><a class="dropdown-item" href="home-2.html">Modern Home</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
+                        <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
+                        <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
+                        <li><a class="dropdown-item" href="occasions.html">Occasions</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Actions -->
+            <div
+                class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-auto mt-lg-0 ps-lg-3 border-lg-start">
+                <div class="d-flex align-items-center gap-1 desktop-only">
+                    <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleDesktop"
+                        aria-label="Toggle RTL" title="Toggle RTL">
+                        <span class="fw-bold small">RTL</span>
+                    </button>
+                    <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleDesktop"
+                        aria-label="Toggle Theme">
+                        <i class="bi bi-moon-stars-fill fs-5"></i>
+                    </button>
+                </div>
+                <a href="login.html" class="btn btn-outline-primary w-100 w-lg-auto">Login</a>
+                <a href="register.html" class="btn btn-primary w-100 w-lg-auto">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+<header class="sticky-top">
         <nav class="navbar navbar-expand-custom px-3 px-lg-4">
             <div class="container-fluid align-items-center">
 
@@ -52,57 +104,6 @@
                     </button>
                 </div>
 
-                <!-- Offcanvas for Mobile -->
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header border-bottom">
-                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-
-                    <div class="offcanvas-body d-flex flex-column align-items-lg-center">
-                        <ul class="navbar-nav mx-lg-auto mb-4 mb-lg-0 align-items-lg-center gap-lg-3 fs-5 fs-lg-6">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Home</a>
-                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="homeDropdown">
-                                    <li><a class="dropdown-item" href="index.html">Classic Home</a></li>
-                                    <li><a class="dropdown-item" href="home-2.html">Modern Home</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                                <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="shopDropdown">
-                                    <li><a class="dropdown-item" href="shop-roses.html">Roses</a></li>
-                                    <li><a class="dropdown-item" href="shop-lilies.html">Lilies</a></li>
-                                    <li><a class="dropdown-item" href="occasions.html">Occasions</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                        <!-- Actions -->
-                        <div
-                            class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-auto mt-lg-0 ps-lg-3 border-lg-start">
-                            <div class="d-flex align-items-center gap-1 desktop-only">
-                                <button class="btn btn-link text-primary shadow-none px-2" id="rtlToggleDesktop"
-                                    aria-label="Toggle RTL" title="Toggle RTL">
-                                    <span class="fw-bold small">RTL</span>
-                                </button>
-                                <button class="btn btn-link text-primary shadow-none px-2" id="themeToggleDesktop"
-                                    aria-label="Toggle Theme">
-                                    <i class="bi bi-moon-stars-fill fs-5"></i>
-                                </button>
-                            </div>
-                            <a href="login.html" class="btn btn-outline-primary w-100 w-lg-auto">Login</a>
-                            <a href="register.html" class="btn btn-primary w-100 w-lg-auto">Sign Up</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </nav>
     </header>
@@ -111,30 +112,30 @@
         <div class="container text-center">
             <h1 class="display-4 fw-bold mb-4">Floral Gallery</h1>
             <p class="lead mb-5 mx-auto">Get inspired by our latest masterful creations.</p>
-            <div class="row g-4">
-                <div class="col-md-4 text-center"><img src="assets/images/products/Blush Peony Dream.jfif"
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <div class="col text-center"><img src="assets/images/products/Blush Peony Dream.jfif"
                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="height: 300px;"></div>
-                <div class="col-md-4 text-center"><img src="assets/images/products/Golden Sunset.webp"
+                <div class="col text-center"><img src="assets/images/products/Golden Sunset.webp"
                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="height: 300px;"></div>
-                <div class="col-md-4 text-center"><img src="assets/images/products/Midnight Calla Lily.jfif"
+                <div class="col text-center"><img src="assets/images/products/Midnight Calla Lily.jfif"
                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="height: 300px;"></div>
-                <div class="col-md-4 text-center"><img src="assets/images/products/Velvet Romance.jfif"
+                <div class="col text-center"><img src="assets/images/products/Velvet Romance.jfif"
                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="height: 300px;"></div>
-                <div class="col-md-4 text-center"><img src="assets/images/products/Vibrant Tiger Lily.jfif"
+                <div class="col text-center"><img src="assets/images/products/Vibrant Tiger Lily.jfif"
                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="height: 300px;"></div>
-                <div class="col-md-4 text-center"><img src="assets/images/products/Morning Dew Daylily.jfif"
+                <div class="col text-center"><img src="assets/images/products/Morning Dew Daylily.jfif"
                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="height: 300px;"></div>
-                <div class="col-md-4 text-center"><img src="assets/images/products/Ethereal White.jfif"
+                <div class="col text-center"><img src="assets/images/products/Ethereal White.jfif"
                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="height: 300px;"></div>
-                <div class="col-md-4 text-center"><img src="assets/images/products/Crimson Rose and Stargazer Mix.jfif"
+                <div class="col text-center"><img src="assets/images/products/Crimson Rose and Stargazer Mix.jfif"
                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="height: 300px;"></div>
-                <div class="col-md-4 text-center"><img src="assets/images/products/Pink Asiatic Lily.jfif"
+                <div class="col text-center"><img src="assets/images/products/Pink Asiatic Lily.jfif"
                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="height: 300px;"></div>
-                <div class="col-md-4 text-center"><img src="assets/images/products/Pure White Calla.jfif"
+                <div class="col text-center"><img src="assets/images/products/Pure White Calla.jfif"
                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="height: 300px;"></div>
-                <div class="col-md-4 text-center"><img src="assets/images/products/Sunshine Yellow.jfif"
+                <div class="col text-center"><img src="assets/images/products/Sunshine Yellow.jfif"
                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="height: 300px;"></div>
-                <div class="col-md-4 text-center"><img src="assets/images/products/Vibrant Spring.jfif"
+                <div class="col text-center"><img src="assets/images/products/Vibrant Spring.jfif"
                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="height: 300px;"></div>
             </div>
         </div>

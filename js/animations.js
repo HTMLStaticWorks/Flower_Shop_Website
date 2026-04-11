@@ -38,9 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('navbar-scrolled', 'glass-panel');
                 navbar.style.height = '70px';
+                document.documentElement.style.setProperty('--nav-height', '70px');
             } else {
                 navbar.classList.remove('navbar-scrolled', 'glass-panel');
-                navbar.style.height = 'var(--nav-height)';
+                navbar.style.height = '80px';
+                document.documentElement.style.setProperty('--nav-height', '80px');
             }
         });
     }
