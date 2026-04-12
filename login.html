@@ -64,6 +64,23 @@
         .password-toggle i {
             pointer-events: none;
         }
+
+        .social-btn {
+            background-color: var(--bg-white) !important;
+            color: var(--text-main) !important;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-radius: 15px !important;
+            border: 1px solid var(--border-light) !important;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
+        }
+
+        [data-bs-theme="dark"] .social-btn i.bi-apple {
+            color: #fff !important;
+        }
     </style>
 </head>
 
@@ -132,6 +149,30 @@
                         class="btn btn-primary btn-lg w-100 py-3 rounded-pill shadow-lg glow-on-hover mb-4">
                         <span class="fw-bold">Login to Account</span>
                     </button>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <hr class="flex-grow-1 text-muted opacity-25">
+                        <span class="px-3 text-muted small fw-medium text-uppercase" style="letter-spacing: 1px;">Or
+                            continue with</span>
+                        <hr class="flex-grow-1 text-muted opacity-25">
+                    </div>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-6">
+                            <button type="button"
+                                class="btn social-btn w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                                <i class="bi bi-google text-danger fs-5"></i>
+                                <span class="small fw-bold">Google</span>
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button"
+                                class="btn social-btn w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                                <i class="bi bi-apple text-primary fs-5"></i>
+                                <span class="small fw-bold">Apple</span>
+                            </button>
+                        </div>
+                    </div>
 
                     <p class="text-center text-muted small mb-0">
                         Don't have an account? <a href="register.html"
