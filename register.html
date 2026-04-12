@@ -37,33 +37,44 @@
             z-index: 1050;
             display: flex;
             gap: 0.25rem;
-            padding: 0.35rem;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
         }
 
-        [data-bs-theme="dark"] .auth-page-controls {
-            background: rgba(33, 37, 41, 0.6);
+        .auth-page-controls .btn {
+            width: 52px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
         }
 
         .auth-logo {
             width: 140px;
             height: auto;
         }
+
+        .password-toggle {
+            cursor: pointer;
+        }
+
+        .password-toggle:focus {
+            box-shadow: none;
+        }
+
+        .password-toggle i {
+            pointer-events: none;
+        }
     </style>
 </head>
 
 <body class="bg-body-tertiary">
 
-    <div class="auth-page-controls shadow-sm border border-opacity-10">
-        <button class="btn btn-sm btn-link text-primary shadow-none px-2" id="rtlToggle" aria-label="Toggle RTL"
-            title="Toggle RTL">
+    <div class="auth-page-controls">
+        <button class="btn btn-sm btn-light text-primary shadow-sm border border-opacity-10 rounded-pill px-2"
+            id="rtlToggle" aria-label="Toggle RTL" title="Toggle RTL">
             <span class="fw-bold small">RTL</span>
         </button>
-        <button class="btn btn-sm btn-link text-primary shadow-none px-2" id="themeToggle" aria-label="Toggle Theme"
-            title="Toggle Theme">
+        <button class="btn btn-sm btn-light text-primary shadow-sm border border-opacity-10 rounded-pill px-2"
+            id="themeToggle" aria-label="Toggle Theme" title="Toggle Theme">
             <i class="bi bi-moon-stars-fill fs-5"></i>
         </button>
     </div>
@@ -119,8 +130,31 @@
                         <div class="input-group">
                             <span class="input-group-text bg-light border-0 px-3"><i
                                     class="bi bi-lock text-primary"></i></span>
-                            <input type="password" class="form-control bg-light border-0 py-3 shadow-none"
-                                placeholder="Min. 8 characters" required>
+                            <input id="registerPassword" type="password"
+                                class="form-control bg-light border-0 py-3 shadow-none"
+                                placeholder="Min. 8 characters" autocomplete="new-password" required>
+                            <button class="input-group-text bg-light border-0 px-3 password-toggle" type="button"
+                                aria-label="Show password" aria-controls="registerPassword" aria-pressed="false"
+                                title="Show password" data-password-toggle>
+                                <i class="bi bi-eye text-primary"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label small fw-bold text-uppercase ms-1"
+                            style="letter-spacing: 0.5px;">Confirm Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-0 px-3"><i
+                                    class="bi bi-lock text-primary"></i></span>
+                            <input id="registerConfirmPassword" type="password"
+                                class="form-control bg-light border-0 py-3 shadow-none"
+                                placeholder="Re-enter password" autocomplete="new-password" required>
+                            <button class="input-group-text bg-light border-0 px-3 password-toggle" type="button"
+                                aria-label="Show password" aria-controls="registerConfirmPassword"
+                                aria-pressed="false" title="Show password" data-password-toggle>
+                                <i class="bi bi-eye text-primary"></i>
+                            </button>
                         </div>
                     </div>
 
@@ -198,6 +232,58 @@
                 setRTL(!currentRTL);
             });
         });
+    </script>
+
+    <script>
+        document.querySelectorAll('[data-password-toggle]').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const targetId = toggle.getAttribute('aria-controls');
+                const input = targetId ? document.getElementById(targetId) : null;
+                if (!input) return;
+
+                const isHidden = input.type === 'password';
+                input.type = isHidden ? 'text' : 'password';
+
+                const icon = toggle.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('bi-eye', !isHidden);
+                    icon.classList.toggle('bi-eye-slash', isHidden);
+                }
+
+                const label = isHidden ? 'Hide password' : 'Show password';
+                toggle.setAttribute('aria-label', label);
+                toggle.setAttribute('title', label);
+                toggle.setAttribute('aria-pressed', String(isHidden));
+            });
+        });
+    </script>
+
+    <script>
+        const registerForm = document.querySelector('form');
+        const passwordInput = document.getElementById('registerPassword');
+        const confirmPasswordInput = document.getElementById('registerConfirmPassword');
+
+        function validatePasswordMatch() {
+            if (!passwordInput || !confirmPasswordInput) return;
+            const mismatch = passwordInput.value && confirmPasswordInput.value && passwordInput.value !== confirmPasswordInput.value;
+            confirmPasswordInput.setCustomValidity(mismatch ? 'Passwords do not match.' : '');
+        }
+
+        if (passwordInput && confirmPasswordInput) {
+            passwordInput.addEventListener('input', validatePasswordMatch);
+            confirmPasswordInput.addEventListener('input', validatePasswordMatch);
+        }
+
+        if (registerForm) {
+            registerForm.addEventListener('submit', (e) => {
+                validatePasswordMatch();
+                if (!registerForm.checkValidity()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                registerForm.classList.add('was-validated');
+            }, false);
+        }
     </script>
 
     <!-- Custom JS -->
