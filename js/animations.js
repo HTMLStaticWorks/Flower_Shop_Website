@@ -34,16 +34,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     if (navbar) {
+        const applyNavbarState = () => {
+            const isScrolled = window.scrollY > 50;
+            navbar.classList.toggle('navbar-scrolled', isScrolled);
+            document.documentElement.style.setProperty('--nav-height', isScrolled ? '70px' : '80px');
+        };
+
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('navbar-scrolled', 'glass-panel');
-                navbar.style.height = '70px';
-                document.documentElement.style.setProperty('--nav-height', '70px');
-            } else {
-                navbar.classList.remove('navbar-scrolled', 'glass-panel');
-                navbar.style.height = '80px';
-                document.documentElement.style.setProperty('--nav-height', '80px');
-            }
+            if (ticking) return;
+            ticking = true;
+            window.requestAnimationFrame(() => {
+                applyNavbarState();
+                ticking = false;
+            });
         });
+
+        window.addEventListener('resize', applyNavbarState);
+        applyNavbarState();
     }
 });
